@@ -143,7 +143,7 @@ export default function Header() {
                   JOVIA <span className="text-[var(--foundation-accent)]">FOUNDATION</span>
                 </span>
                 <span className="text-[10px] sm:text-[11px] font-bold tracking-wider text-[var(--foreground-muted)] uppercase hidden sm:block">
-                  Every Child • Every Ability • Every Opportunity
+                  Joseph's Opportunities, Values, Inclusion & Ability
                 </span>
               </div>
             </Link>
