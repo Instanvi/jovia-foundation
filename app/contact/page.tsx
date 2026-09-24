@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import {
   Envelope,
   Phone,
@@ -166,6 +167,26 @@ export default function ContactPage() {
                       safeguarding@joviafoundation.org
                     </a>
                   </p>
+                </div>
+
+                {/* Community Connection Photo Card */}
+                <div className="relative h-48 rounded-3xl overflow-hidden shadow-md border border-purple-100 group">
+                  <Image
+                    src="/images/womanchildtalking.avif"
+                    alt="Community & Caregiver Connection"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent flex items-end p-5">
+                    <div>
+                      <p className="text-xs font-bold text-[var(--foundation-accent)] uppercase tracking-wider">
+                        Direct Community Support
+                      </p>
+                      <p className="text-sm font-bold text-white mt-0.5">
+                        Connecting families, volunteers & partners in Canada and Cameroon
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

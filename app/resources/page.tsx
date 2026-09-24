@@ -1,355 +1,445 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import {
   FileText,
   Download,
   BookOpen,
-  FolderSimple,
   ArrowRight,
   ShieldCheck,
   CheckCircle,
-  CaretDown,
-  CaretUp,
+  MapPin,
+  CalendarBlank,
+  X,
+  MagnifyingGlassPlus,
+  ShareNetwork,
+  Image as ImageIcon,
 } from "@phosphor-icons/react/dist/ssr";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 
+interface GalleryItem {
+  id: number;
+  title: string;
+  category: "education" | "mobility" | "family" | "community";
+  categoryLabel: string;
+  image: string;
+  location: string;
+  date: string;
+  description: string;
+  span?: string; // For bento grid styling
+}
+
 export default function ResourcesPage() {
-  const [downloadNotice, setDownloadNotice] = useState<string | null>(null);
-  const [activeTab, setActiveTab] = useState<"bylaws" | "conduct" | "reports">("bylaws");
-  const [openBylawArticle, setOpenBylawArticle] = useState<number | null>(1);
+  const [selectedCategory, setSelectedCategory] = useState<string>("all");
+  const [activePhoto, setActivePhoto] = useState<GalleryItem | null>(null);
 
-  const handleDownload = (filename: string) => {
-    setDownloadNotice(`Downloading "${filename}"...`);
-    setTimeout(() => {
-      setDownloadNotice(null);
-    }, 3000);
-  };
-
-  const bylawArticles = [
+  const galleryItems: GalleryItem[] = [
     {
-      article: "Part A — Organizational Identity",
-      title: "Name, Slogan, Vision, Mission & 8 Core Values",
-      content:
-        "Name: JOVIA Foundation (Joseph’s Opportunities, Values, Inclusion & Ability). Primary Slogan: 'Every Child. Every Ability. Every Opportunity.' Supporting Statement: 'Every Child Deserves a Chance to Thrive.' Core values include Dignity, Opportunity, Compassion, Integrity, Equity, Inclusion, Ability, and Accountability.",
+      id: 1,
+      title: "Adaptive Classroom Learning & Literacy",
+      category: "education",
+      categoryLabel: "Inclusive Classrooms",
+      image: "/images/disabledperson.jpg",
+      location: "Yaoundé, Centre Region, Cameroon",
+      date: "February 2026",
+      description:
+        "Young learners with disabilities accessing adaptive textbooks, large-print materials, and dedicated inclusive classroom environments.",
     },
     {
-      article: "Part B — Charitable Objects",
-      title: "5 Proposed Governing Purposes & Restrictions",
-      content:
-        "1. Relieve poverty among children with disabilities. 2. Advance inclusive education and literacy. 3. Promote health, mobility and physical rehabilitation. 4. Benefit the community and relieve caregiver isolation. 5. Advance public understanding and anti-stigma education. The Foundation operates strictly without purpose of gain and for the public benefit in Canada and Cameroon.",
+      id: 2,
+      title: "Pediatric Wheelchair & Mobility Freedom",
+      category: "mobility",
+      categoryLabel: "Mobility & Health",
+      image: "/images/wheelchairperson.jpg",
+      location: "Bamenda, Northwest Region, Cameroon",
+      date: "January 2026",
+      description:
+        "Customized pediatric wheelchair fitting providing newfound mobility, independence, and joyful inclusion in school and community life.",
     },
     {
-      article: "Article 2 — Membership Structure",
-      title: "Eligibility, Rights, Renewal & CAD $100 Annual Fee",
-      content:
-        "One voting class of membership: Individual Voting Members (age 18+, agreement with bylaws and vision). Annual membership fee is CAD $100 per member. Members in good standing have voting rights at the AGM and participate in democratic governance. Includes written procedure for resignation, suspension, and procedural fairness for termination.",
+      id: 3,
+      title: "Clinical Pediatric Assessment & Healthcare",
+      category: "mobility",
+      categoryLabel: "Mobility & Health",
+      image: "/images/nursechild.avif",
+      location: "Bafut Health Clinic, Cameroon",
+      date: "January 2026",
+      description:
+        "Qualified nursing and pediatric physiotherapy specialists delivering posture evaluations, clinical care, and rehabilitation therapies.",
     },
     {
-      article: "Article 4 & 5 — Board of Directors & Officers",
-      title: "Composition, Election, 2-Year Terms & Separation of Roles",
-      content:
-        "Governed by 5 to 11 directors elected for staggered 2-year terms (max 3 consecutive terms). Officers include Chair, Vice-Chair, Secretary, and Treasurer. Chair and Treasurer roles must be held by separate individuals. Directors serve without remuneration.",
+      id: 4,
+      title: "Rural Community Outreach & Direct Aid",
+      category: "community",
+      categoryLabel: "Field Team & Community",
+      image: "/images/poordisabledafrican.avif",
+      location: "Mezam Division, Cameroon",
+      date: "December 2025",
+      description:
+        "Reaching the most vulnerable children in underserved rural villages with essential nutrition, clothing, medical supplies, and barrier-breaking support.",
     },
     {
-      article: "Article 9 & 14 — Safeguarding & International Operations",
-      title: "Mandatory Child Safeguarding & Canada-Cameroon Delivery",
-      content:
-        "Mandatory screening and background checks for all representatives. Zero tolerance for abuse or exploitation. Strict accounting and monitoring for international transfers to Cameroon in full compliance with Canadian charity law and CRA qualifying disbursement rules.",
+      id: 5,
+      title: "Caregiver Mother Empowerment & Respite",
+      category: "family",
+      categoryLabel: "Caregiver Support",
+      image: "/images/poorwomantalking.avif",
+      location: "Douala, Littoral Region, Cameroon",
+      date: "November 2025",
+      description:
+        "Peer respite circles and livelihood counseling for mothers caring for children with severe disabilities, building sustainable family resilience.",
     },
     {
-      article: "Article 17 — Dissolution & Asset Distribution",
-      title: "Protection of Charitable Assets",
-      content:
-        "Upon dissolution and after payment of all debts, remaining assets shall not be distributed to any member or director, but transferred strictly to one or more qualified donees under the Income Tax Act or charitable organizations with similar purposes.",
+      id: 6,
+      title: "Speech, Communication & Family Connection",
+      category: "education",
+      categoryLabel: "Inclusive Classrooms",
+      image: "/images/womanchildtalking.avif",
+      location: "Calgary, Alberta, Canada",
+      date: "October 2025",
+      description:
+        "Early childhood communication coaching and parent-guided adaptive speech development, ensuring every child finds their voice.",
+    },
+    {
+      id: 7,
+      title: "Interdisciplinary Medical & Specialist Council",
+      category: "community",
+      categoryLabel: "Field Team & Community",
+      image: "/images/consulting-team.jpg",
+      location: "Yaoundé & Calgary Collaboration",
+      date: "September 2025",
+      description:
+        "Specialist medical advisors, therapists, and humanitarian coordinators collaborating on international program governance and healthcare standards.",
+    },
+    {
+      id: 8,
+      title: "All-Terrain Mobility Cart Distribution & Logistics",
+      category: "mobility",
+      categoryLabel: "Mobility & Health",
+      image: "/images/deliveryboy.jpg",
+      location: "Northwest Region, Cameroon",
+      date: "August 2025",
+      description:
+        "Direct field logistics delivering rugged hand-powered carts designed for rough unpaved rural roads, enabling children to reach schools independently.",
+    },
+    {
+      id: 9,
+      title: "Community Partnership & Respite Livelihoods",
+      category: "family",
+      categoryLabel: "Caregiver Support",
+      image: "/images/handshake.jpg",
+      location: "Edmonton, Alberta, Canada",
+      date: "July 2025",
+      description:
+        "Establishing partnerships with local support networks, distributing micro-seed grants for family enterprise, and fostering mutual solidarity.",
+    },
+    {
+      id: 10,
+      title: "Youth Advocacy & Disability Rights Engagement",
+      category: "community",
+      categoryLabel: "Field Team & Community",
+      image: "/images/man-woman.jpg",
+      location: "Toronto, Ontario, Canada",
+      date: "June 2025",
+      description:
+        "Volunteer advocates and lived-experience leaders organizing community awareness campaigns to eliminate stigma and promote accessibility.",
+    },
+    {
+      id: 11,
+      title: "Inclusive Teacher Training & Stakeholder Roundtable",
+      category: "education",
+      categoryLabel: "Inclusive Classrooms",
+      image: "/images/meeting.jpg",
+      location: "Bamenda Learning Hub, Cameroon",
+      date: "May 2025",
+      description:
+        "Workshops for mainstream school teachers on adaptive pedagogical methods, classroom accessibility modifications, and non-discriminatory education.",
     },
   ];
 
-  const conductArticles = [
-    {
-      num: "01",
-      title: "Purpose & Scope",
-      desc: "Applies to all directors, officers, members, employees, volunteers, contractors, and partners acting for JOVIA Foundation in Canada, Cameroon, or elsewhere.",
-    },
-    {
-      num: "02",
-      title: "Child and Vulnerable-Person Safeguarding",
-      desc: "Zero tolerance for abuse, exploitation, or mistreatment. Strict boundaries, photographic consent rules, and immediate mandatory escalation of any safeguarding concern.",
-    },
-    {
-      num: "03",
-      title: "Financial Integrity & Truth in Fundraising",
-      desc: "Transparent handling of all funds. Expenses must be legitimate and documented. Beneficiaries must never be portrayed in a degrading or exploitative manner.",
-    },
-    {
-      num: "04",
-      title: "Conflicts of Interest & Anti-Corruption",
-      desc: "Foundation opportunities, beneficiary relationships, and resources shall never be used for private business, partisan politics, or personal financial advantage.",
-    },
-    {
-      num: "05",
-      title: "Political & Religious Neutrality",
-      desc: "Charitable programs are delivered unconditionally without requiring beneficiaries to support any political party, candidate, or religious organization.",
-    },
-    {
-      num: "06",
-      title: "Non-Retaliation & Whistleblower Protection",
-      desc: "Fair, confidential reporting process. Retaliation against any person raising genuine concerns in good faith is strictly prohibited.",
-    },
+  const filteredItems =
+    selectedCategory === "all"
+      ? galleryItems
+      : galleryItems.filter((item) => item.category === selectedCategory);
+
+  const categories = [
+    { id: "all", label: "All Photos" },
+    { id: "education", label: "Inclusive Classrooms" },
+    { id: "mobility", label: "Mobility & Health" },
+    { id: "family", label: "Caregiver Support" },
+    { id: "community", label: "Field Team & Community" },
   ];
 
   return (
     <>
+      {/* Lightbox Modal */}
+      {activePhoto && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/85 backdrop-blur-md animate-fade-in">
+          <div className="relative bg-white rounded-3xl overflow-hidden max-w-3xl w-full shadow-2xl border border-white/20">
+            {/* Close Button */}
+            <button
+              onClick={() => setActivePhoto(null)}
+              className="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-black/60 hover:bg-black text-white flex items-center justify-center transition-colors"
+              aria-label="Close"
+            >
+              <X weight="bold" className="w-5 h-5" />
+            </button>
+
+            {/* Photo Container */}
+            <div className="relative h-72 sm:h-96 w-full bg-gray-900">
+              <Image
+                src={activePhoto.image}
+                alt={activePhoto.title}
+                fill
+                className="object-cover"
+              />
+              <div className="absolute top-4 left-4">
+                <Badge variant="primary" className="font-bold shadow-md">
+                  {activePhoto.categoryLabel}
+                </Badge>
+              </div>
+            </div>
+
+            {/* Photo Details */}
+            <div className="p-6 sm:p-8 space-y-4">
+              <div className="flex flex-wrap items-center gap-4 text-xs font-bold text-gray-500">
+                <span className="flex items-center gap-1.5 text-[var(--foundation-primary)]">
+                  <MapPin weight="bold" className="w-4 h-4" />
+                  {activePhoto.location}
+                </span>
+                <span>•</span>
+                <span className="flex items-center gap-1.5">
+                  <CalendarBlank weight="bold" className="w-4 h-4" />
+                  {activePhoto.date}
+                </span>
+              </div>
+
+              <h3 className="text-2xl font-bold text-gray-900">{activePhoto.title}</h3>
+              <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+                {activePhoto.description}
+              </p>
+
+              <div className="pt-4 border-t border-purple-50 flex flex-wrap items-center justify-between gap-4">
+                <a
+                  href={activePhoto.image}
+                  download={activePhoto.image.split("/").pop()}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[var(--foundation-primary)] hover:bg-[var(--foundation-primary-hover)] text-white text-sm font-bold shadow-sm transition-all"
+                >
+                  <Download weight="bold" className="w-4 h-4" />
+                  Download High-Res Photo
+                </a>
+                <Button
+                  onClick={() => setActivePhoto(null)}
+                  variant="outline"
+                  size="default"
+                  className="font-bold border-gray-200"
+                >
+                  Close Viewer
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Page Hero */}
-      <section className="relative pt-36 pb-16 lg:pt-44 lg:pb-20 bg-gradient-to-b from-[var(--surface)] to-white overflow-hidden">
+      <section className="relative pt-36 pb-16 lg:pt-44 lg:pb-20 bg-gradient-to-b from-[var(--surface)] via-white to-white overflow-hidden">
         <div className="hero-mesh-glow" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl space-y-4 animate-fade-in">
-            <Badge variant="default" className="font-bold">
-              Governance, Bylaws & Safeguarding
-            </Badge>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight">
-              Governance & <br />
-              <span className="text-gradient-primary">Public Accountability</span>
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-100 text-[var(--foundation-primary)] text-xs font-extrabold uppercase tracking-wider">
+              <ImageIcon weight="bold" className="w-4 h-4" />
+              Media & Field Impact Gallery
+            </div>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.15] text-gray-900">
+              Witnessing Inclusion <br />
+              <span className="text-gradient-primary">in Every Action</span>
             </h1>
-            <p className="text-lg sm:text-xl text-[var(--foreground-muted)] leading-relaxed">
-              Access the complete governing documents, proposed bylaws, code of conduct, child
-              safeguarding policies, and audited annual reports of JOVIA Foundation.
+            <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
+              Explore field photography, adaptive classroom breakthroughs, mobility distributions,
+              and community stories from our ongoing humanitarian mission in Canada and Cameroon.
             </p>
+          </div>
+
+          {/* Filter Tabs */}
+          <div className="mt-10 flex flex-wrap gap-2.5 pt-4 border-t border-purple-100">
+            {categories.map((cat) => (
+              <button
+                key={cat.id}
+                onClick={() => setSelectedCategory(cat.id)}
+                className={`px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all ${
+                  selectedCategory === cat.id
+                    ? "bg-[var(--foundation-primary)] text-white shadow-md hover:bg-[var(--foundation-primary-hover)]"
+                    : "bg-white hover:bg-purple-50 text-gray-700 border border-purple-100"
+                }`}
+              >
+                {cat.label}
+              </button>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Download Alert Notice */}
-      {downloadNotice && (
-        <div className="fixed bottom-6 right-6 z-50 p-4 rounded-2xl bg-[var(--foundation-primary)] text-white shadow-2xl flex items-center gap-3 animate-fade-in">
-          <CheckCircle weight="fill" className="w-5 h-5 text-amber-300" />
-          <span className="text-sm font-bold">{downloadNotice}</span>
-        </div>
-      )}
-
-      {/* Interactive Tabs */}
-      <section className="py-12 bg-white">
+      {/* Main Gallery Grid */}
+      <section className="py-12 lg:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap items-center justify-center gap-3 mb-12">
-            <button
-              onClick={() => setActiveTab("bylaws")}
-              className={`px-6 py-3 rounded-full text-sm font-bold transition-all ${
-                activeTab === "bylaws"
-                  ? "bg-[var(--foundation-primary)] text-white shadow-md shadow-purple-500/20"
-                  : "bg-[var(--surface)] text-[var(--foreground)] hover:bg-purple-100"
-              }`}
-            >
-              Proposed Bylaws & Framework
-            </button>
-            <button
-              onClick={() => setActiveTab("conduct")}
-              className={`px-6 py-3 rounded-full text-sm font-bold transition-all ${
-                activeTab === "conduct"
-                  ? "bg-[var(--foundation-primary)] text-white shadow-md shadow-purple-500/20"
-                  : "bg-[var(--surface)] text-[var(--foreground)] hover:bg-purple-100"
-              }`}
-            >
-              Code of Conduct & Safeguarding
-            </button>
-            <button
-              onClick={() => setActiveTab("reports")}
-              className={`px-6 py-3 rounded-full text-sm font-bold transition-all ${
-                activeTab === "reports"
-                  ? "bg-[var(--foundation-primary)] text-white shadow-md shadow-purple-500/20"
-                  : "bg-[var(--surface)] text-[var(--foreground)] hover:bg-purple-100"
-              }`}
-            >
-              Audited Annual Reports & Media
-            </button>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            {filteredItems.map((item) => (
+              <div
+                key={item.id}
+                onClick={() => setActivePhoto(item)}
+                className="group relative bg-white rounded-3xl overflow-hidden border border-purple-100 shadow-[0_4px_20px_-4px_rgba(123,2,246,0.06)] hover:shadow-2xl transition-all duration-300 cursor-pointer flex flex-col justify-between"
+              >
+                {/* Photo Area */}
+                <div className="relative h-64 sm:h-72 w-full overflow-hidden bg-purple-50">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                    <span className="p-3 rounded-full bg-white/90 text-[var(--foundation-primary)] shadow-lg transform translate-y-4 group-hover:translate-y-0 transition-transform">
+                      <MagnifyingGlassPlus weight="bold" className="w-6 h-6" />
+                    </span>
+                  </div>
+
+                  <div className="absolute top-4 left-4">
+                    <span className="px-3 py-1 rounded-full text-xs font-extrabold bg-white/95 text-[var(--foundation-primary)] shadow-sm">
+                      {item.categoryLabel}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Card Content */}
+                <div className="p-6 space-y-3 flex-1 flex flex-col justify-between">
+                  <div className="space-y-2">
+                    <div className="flex items-center gap-2 text-xs font-bold text-gray-500">
+                      <MapPin weight="bold" className="w-3.5 h-3.5 text-[var(--foundation-accent)]" />
+                      <span>{item.location}</span>
+                    </div>
+                    <h3 className="text-lg font-bold text-gray-900 group-hover:text-[var(--foundation-primary)] transition-colors leading-snug">
+                      {item.title}
+                    </h3>
+                    <p className="text-xs sm:text-sm text-gray-600 line-clamp-2 leading-relaxed">
+                      {item.description}
+                    </p>
+                  </div>
+
+                  <div className="pt-3 border-t border-purple-50 flex items-center justify-between text-xs font-bold text-[var(--foundation-primary)]">
+                    <span>View Details</span>
+                    <ArrowRight weight="bold" className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Official Publications & Brand Kit Downloads */}
+      <section className="py-16 lg:py-24 bg-[var(--background-alt)] border-t border-purple-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-14 space-y-3">
+            <Badge variant="accent" className="font-bold">
+              Publications & Assets
+            </Badge>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight">
+              Official Foundation Resources
+            </h2>
+            <p className="text-base text-gray-600">
+              Download our official brand assets, bylaws summary, and audited reporting documents.
+            </p>
           </div>
 
-          {/* TAB 1: BYLAWS */}
-          {activeTab === "bylaws" && (
-            <div id="bylaws" className="space-y-8 animate-fade-in">
-              <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 p-8 rounded-3xl bg-[var(--surface)] border border-purple-100">
-                <div>
-                  <Badge variant="default" className="mb-2">
-                    Alberta Societies Act Compliant
-                  </Badge>
-                  <h3 className="text-2xl font-bold text-[var(--foreground)]">
-                    JOVIA Foundation Proposed Bylaws & Framework
-                  </h3>
-                  <p className="text-sm text-[var(--foreground-muted)] mt-1">
-                    Formal 20-Article Constitution establishing Canada and Cameroon operations, CAD $100 membership, and public benefit governance.
-                  </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Card 1: Official Logo Kit */}
+            <div className="bg-white p-8 rounded-3xl border border-purple-100 shadow-sm hover:shadow-md transition-all space-y-4 flex flex-col justify-between">
+              <div className="space-y-3">
+                <div className="w-12 h-12 rounded-2xl bg-purple-100 text-[var(--foundation-primary)] flex items-center justify-center font-bold">
+                  <FileText weight="bold" className="w-6 h-6" />
                 </div>
-                <Button
-                  onClick={() => handleDownload("JOVIA_Foundation_Proposed_Bylaws.pdf")}
-                  variant="primary"
-                  size="default"
-                  className="font-bold shrink-0"
+                <h3 className="text-xl font-bold text-gray-900">Official Logo & Brand Assets</h3>
+                <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                  Official high-resolution Vector SVG logo and full white-background mark for media, partners, and campaigns.
+                </p>
+              </div>
+
+              <div className="pt-4 border-t border-purple-50 space-y-2.5">
+                <a
+                  href="/jovialogo.svg"
+                  download="jovia-foundation-logo.svg"
+                  className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-[var(--foundation-primary)] hover:bg-[var(--foundation-primary-hover)] text-white text-xs font-bold transition-all shadow-sm"
                 >
-                  <Download weight="bold" className="w-4 h-4 mr-1.5" />
-                  Download Bylaws (PDF)
+                  <Download weight="bold" className="w-4 h-4" />
+                  Download Vector Logo (SVG)
+                </a>
+                <a
+                  href="/fulllogojoviawhitebg.jpeg"
+                  download="jovia-full-logo.jpeg"
+                  className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-purple-50 hover:bg-purple-100 text-[var(--foundation-primary)] text-xs font-bold transition-all border border-purple-200"
+                >
+                  <Download weight="bold" className="w-4 h-4" />
+                  Download Full Logo (JPEG)
+                </a>
+              </div>
+            </div>
+
+            {/* Card 2: Code of Conduct & Safeguarding */}
+            <div className="bg-white p-8 rounded-3xl border border-purple-100 shadow-sm hover:shadow-md transition-all space-y-4 flex flex-col justify-between">
+              <div className="space-y-3">
+                <div className="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold">
+                  <ShieldCheck weight="bold" className="w-6 h-6" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900">Code of Conduct & Ethics</h3>
+                <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                  Complete 10-article governing standards, child safeguarding rules, and confidential reporting channels.
+                </p>
+              </div>
+
+              <div className="pt-4 border-t border-purple-50">
+                <Button
+                  href="/code-of-conduct"
+                  variant="outline"
+                  size="default"
+                  className="w-full font-bold border-2 border-[var(--foundation-primary)] text-[var(--foundation-primary)]"
+                >
+                  <BookOpen weight="bold" className="w-4 h-4" />
+                  Read Code of Conduct
                 </Button>
               </div>
-
-              {/* Accordion List of Bylaw Key Articles */}
-              <div className="space-y-4">
-                {bylawArticles.map((b, idx) => {
-                  const isOpen = openBylawArticle === idx;
-                  return (
-                    <div
-                      key={idx}
-                      className="rounded-2xl border border-purple-100 bg-white overflow-hidden shadow-sm"
-                    >
-                      <button
-                        onClick={() => setOpenBylawArticle(isOpen ? null : idx)}
-                        className="w-full p-6 text-left flex items-center justify-between hover:bg-[var(--surface)] transition-colors"
-                      >
-                        <div>
-                          <span className="text-xs font-bold text-[var(--foundation-primary)] uppercase tracking-wider">
-                            {b.article}
-                          </span>
-                          <h4 className="text-lg font-bold text-[var(--foreground)] mt-0.5">
-                            {b.title}
-                          </h4>
-                        </div>
-                        {isOpen ? (
-                          <CaretUp weight="bold" className="w-5 h-5 text-[var(--foundation-primary)]" />
-                        ) : (
-                          <CaretDown weight="bold" className="w-5 h-5 text-gray-400" />
-                        )}
-                      </button>
-
-                      {isOpen && (
-                        <div className="px-6 pb-6 pt-2 text-sm text-[var(--foreground-muted)] leading-relaxed border-t border-purple-50">
-                          {b.content}
-                        </div>
-                      )}
-                    </div>
-                  );
-                })}
-              </div>
             </div>
-          )}
 
-          {/* TAB 2: CODE OF CONDUCT */}
-          {activeTab === "conduct" && (
-            <div id="conduct" className="space-y-8 animate-fade-in">
-              <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 p-8 rounded-3xl bg-[var(--surface)] border border-purple-100">
-                <div>
-                  <Badge variant="accent" className="mb-2 font-bold">
-                    Zero Tolerance Safeguarding
-                  </Badge>
-                  <h3 className="text-2xl font-bold text-[var(--foreground)]">
-                    JOVIA Foundation Code of Conduct & Safeguarding
-                  </h3>
-                  <p className="text-sm text-[var(--foreground-muted)] mt-1">
-                    Setting minimum standards of behavior for all directors, staff, volunteers, contractors, and field partners.
-                  </p>
+            {/* Card 3: Proposed Bylaws & Annual Report */}
+            <div className="bg-white p-8 rounded-3xl border border-purple-100 shadow-sm hover:shadow-md transition-all space-y-4 flex flex-col justify-between">
+              <div className="space-y-3">
+                <div className="w-12 h-12 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center font-bold">
+                  <BookOpen weight="bold" className="w-6 h-6" />
                 </div>
+                <h3 className="text-xl font-bold text-gray-900">Proposed Bylaws & Framework</h3>
+                <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                  Complete 9-article governing framework under the Societies Act of Alberta, voting rights, and Board elections.
+                </p>
+              </div>
+
+              <div className="pt-4 border-t border-purple-50">
                 <Button
-                  onClick={() => handleDownload("JOVIA_Foundation_Code_of_Conduct.pdf")}
+                  href="/bylaws"
                   variant="primary"
                   size="default"
-                  className="font-bold shrink-0"
+                  className="w-full font-bold shadow-sm"
                 >
-                  <Download weight="bold" className="w-4 h-4 mr-1.5" />
-                  Download Code of Conduct (PDF)
+                  <BookOpen weight="bold" className="w-4 h-4" />
+                  Read & Print Bylaws
                 </Button>
               </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {conductArticles.map((c, i) => (
-                  <div
-                    key={i}
-                    className="p-6 rounded-3xl bg-white border border-purple-100 shadow-sm space-y-3"
-                  >
-                    <span className="text-xs font-bold text-[var(--foundation-primary)]">
-                      ARTICLE {c.num}
-                    </span>
-                    <h4 className="text-lg font-bold text-[var(--foreground)]">{c.title}</h4>
-                    <p className="text-xs sm:text-sm text-[var(--foreground-muted)] leading-relaxed">
-                      {c.desc}
-                    </p>
-                  </div>
-                ))}
-              </div>
             </div>
-          )}
-
-          {/* TAB 3: AUDITED REPORTS & MEDIA */}
-          {activeTab === "reports" && (
-            <div id="reports" className="space-y-12 animate-fade-in">
-              <div>
-                <h3 className="text-2xl font-bold text-[var(--foreground)] mb-6">
-                  Annual Impact & Financial Reports
-                </h3>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                  {[
-                    { year: "2025", title: "Annual Report 2025", size: "2.8 MB" },
-                    { year: "2024", title: "Annual Report 2024", size: "2.4 MB" },
-                    { year: "2023", title: "Founding Progress Report 2023", size: "1.9 MB" },
-                  ].map((r, i) => (
-                    <div
-                      key={i}
-                      className="p-6 rounded-3xl bg-[var(--surface)] border border-purple-100 space-y-4 flex flex-col justify-between"
-                    >
-                      <div>
-                        <div className="flex justify-between items-center mb-2">
-                          <span className="text-2xl font-extrabold text-[var(--foundation-primary)]">
-                            {r.year}
-                          </span>
-                          <span className="text-xs font-semibold px-2 py-0.5 rounded bg-white text-gray-500">
-                            {r.size}
-                          </span>
-                        </div>
-                        <h4 className="text-lg font-bold text-[var(--foreground)]">{r.title}</h4>
-                        <p className="text-xs text-[var(--foreground-muted)] mt-1">
-                          Audited financials, field numbers and governance reports.
-                        </p>
-                      </div>
-
-                      <Button
-                        onClick={() => handleDownload(r.title)}
-                        variant="outline"
-                        size="sm"
-                        className="w-full font-bold bg-white"
-                      >
-                        <Download weight="bold" className="w-4 h-4 mr-1" />
-                        Download PDF
-                      </Button>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Logo & Brand Pack */}
-              <div className="p-8 rounded-3xl bg-gradient-to-r from-purple-50 to-amber-50 border border-purple-100 space-y-4">
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                  <div>
-                    <Badge variant="default" className="mb-2">
-                      Brand Identity Kit
-                    </Badge>
-                    <h4 className="text-xl font-bold text-[var(--foreground)]">
-                      Official JOVIA Logos & Media Assets
-                    </h4>
-                    <p className="text-xs sm:text-sm text-[var(--foreground-muted)]">
-                      High-resolution vector assets (SVG, PNG, JPG) with the official color palette.
-                    </p>
-                  </div>
-                  <Button
-                    onClick={() => handleDownload("JOVIA_Logo_Package.zip")}
-                    variant="primary"
-                    size="default"
-                    className="font-bold shrink-0"
-                  >
-                    <Download weight="bold" className="w-4 h-4 mr-1.5" />
-                    Download Logo Kit (.ZIP)
-                  </Button>
-                </div>
-              </div>
-            </div>
-          )}
+          </div>
         </div>
       </section>
     </>

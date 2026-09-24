@@ -64,8 +64,8 @@ export default function AboutPage() {
             <div className="lg:col-span-6 relative">
               <div className="relative w-full h-[400px] sm:h-[500px] rounded-3xl overflow-hidden shadow-2xl ring-1 ring-purple-100">
                 <Image
-                  src="/images/consulting-team.jpg"
-                  alt="JOVIA Foundation Field Team"
+                  src="/images/poordisabledafrican.avif"
+                  alt="Founding Inspiration of JOVIA Foundation"
                   fill
                   className="object-cover"
                 />
@@ -168,6 +168,47 @@ export default function AboutPage() {
               <p className="text-base text-[var(--foreground-muted)] leading-relaxed">
                 JOVIA Foundation works to improve opportunities and quality of life for children and youth with disabilities and their families by improving access to educational, developmental, health-supporting and social programs; providing appropriate resources and supports; strengthening families; promoting dignity and inclusion; and reducing barriers associated with poverty, stigma, exclusion and lack of services, with programs in Canada and Cameroon.
               </p>
+            </div>
+          </div>
+
+          {/* Photo Pair - Living Our Vision & Mission */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+            <div className="relative h-64 sm:h-72 rounded-3xl overflow-hidden shadow-lg border border-purple-100 group">
+              <Image
+                src="/images/nursechild.avif"
+                alt="Pediatric Healthcare and Clinical Support"
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-6">
+                <div>
+                  <span className="px-3 py-1 rounded-full text-xs font-extrabold bg-[var(--foundation-primary)] text-white shadow-sm mb-2 inline-block">
+                    Pediatric Healthcare
+                  </span>
+                  <p className="text-sm font-bold text-white">
+                    Clinical physiotherapy assessments & specialized rehabilitation therapies
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="relative h-64 sm:h-72 rounded-3xl overflow-hidden shadow-lg border border-purple-100 group">
+              <Image
+                src="/images/wheelchairperson.jpg"
+                alt="Mobility and Inclusion in Action"
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-6">
+                <div>
+                  <span className="px-3 py-1 rounded-full text-xs font-extrabold bg-amber-500 text-white shadow-sm mb-2 inline-block">
+                    Mobility Freedom
+                  </span>
+                  <p className="text-sm font-bold text-white">
+                    Empowering children with wheelchairs & barrier-free community participation
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -303,19 +344,57 @@ export default function AboutPage() {
           </div>
 
           {/* Cameroon Centre Spotlight */}
-          <div className="mt-12 p-8 sm:p-12 rounded-3xl bg-gradient-to-r from-[#7B02F6]/10 to-[#F59E0B]/10 border border-purple-200/80 space-y-4">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-100 text-[var(--foundation-primary)] text-xs font-bold">
-              <Building weight="bold" className="w-4 h-4" />
-              Long-Term Strategic Initiative
+          <div className="mt-12 p-8 sm:p-12 rounded-3xl bg-gradient-to-r from-[#7B02F6]/10 via-[#F59E0B]/10 to-[#7B02F6]/10 border border-purple-200/80">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+              <div className="lg:col-span-7 space-y-4">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-100 text-[var(--foundation-primary)] text-xs font-bold">
+                  <Building weight="bold" className="w-4 h-4" />
+                  Long-Term Strategic Initiative
+                </div>
+                <h3 className="text-2xl sm:text-3xl font-bold text-[var(--foreground)]">
+                  The Cameroon Centre Initiative
+                </h3>
+                <p className="text-sm sm:text-base text-[var(--foreground-muted)] leading-relaxed">
+                  Development of a permanent, sustainable centre and program hub in Cameroon as a central
+                  facility for delivering JOVIA’s pediatric rehabilitation, adaptive classrooms,
+                  caregiver training, and assistive device assembly programs.
+                </p>
+                <div className="grid grid-cols-2 gap-3 pt-2">
+                  <div className="flex items-center gap-2 text-xs font-semibold text-gray-800">
+                    <CheckCircle weight="fill" className="w-4 h-4 text-emerald-600 shrink-0" />
+                    <span>Pediatric Therapy Wing</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-xs font-semibold text-gray-800">
+                    <CheckCircle weight="fill" className="w-4 h-4 text-emerald-600 shrink-0" />
+                    <span>Adaptive Literacy Lab</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-xs font-semibold text-gray-800">
+                    <CheckCircle weight="fill" className="w-4 h-4 text-emerald-600 shrink-0" />
+                    <span>Mobility Assembly Workshop</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-xs font-semibold text-gray-800">
+                    <CheckCircle weight="fill" className="w-4 h-4 text-emerald-600 shrink-0" />
+                    <span>Caregiver Respite Suites</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="lg:col-span-5 relative">
+                <div className="relative w-full h-56 sm:h-64 rounded-2xl overflow-hidden shadow-xl ring-4 ring-white">
+                  <Image
+                    src="/images/consulting-team.jpg"
+                    alt="International Consulting & Project Planning Team"
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-4">
+                    <span className="text-xs font-bold text-white">
+                      Field Consultants & Rehabilitation Planners
+                    </span>
+                  </div>
+                </div>
+              </div>
             </div>
-            <h3 className="text-2xl sm:text-3xl font-bold text-[var(--foreground)]">
-              The Cameroon Centre Initiative
-            </h3>
-            <p className="text-sm sm:text-base text-[var(--foreground-muted)] leading-relaxed max-w-4xl">
-              Development of a permanent, sustainable centre and program hub in Cameroon as a central
-              facility for delivering JOVIA’s pediatric rehabilitation, adaptive classrooms,
-              caregiver training, and assistive device assembly programs.
-            </p>
           </div>
         </div>
       </section>
@@ -349,10 +428,10 @@ export default function AboutPage() {
               </div>
 
               <div className="pt-2 flex flex-wrap gap-4">
-                <Button href="/resources#bylaws" variant="primary" size="default" className="font-bold">
+                <Button href="/bylaws" variant="primary" size="default" className="font-bold">
                   View Proposed Bylaws
                 </Button>
-                <Button href="/resources#conduct" variant="outline" size="default" className="font-bold border-2 border-[var(--foundation-primary)] text-[var(--foundation-primary)]">
+                <Button href="/code-of-conduct" variant="outline" size="default" className="font-bold border-2 border-[var(--foundation-primary)] text-[var(--foundation-primary)]">
                   View Code of Conduct
                 </Button>
               </div>

@@ -39,14 +39,14 @@ export default function Footer() {
     pages: [
       { href: "/", label: "Home" },
       { href: "/about", label: "About Us" },
-      { href: "/resources", label: "Resources & Governance" },
+      { href: "/resources", label: "Media & Field Gallery" },
       { href: "/contact", label: "Contact & Offices" },
     ],
     governance: [
-      { href: "/resources#bylaws", label: "Proposed Bylaws & Framework" },
-      { href: "/resources#conduct", label: "Code of Conduct & Ethics" },
-      { href: "/resources#safeguarding", label: "Child Safeguarding Policy" },
-      { href: "/resources#reports", label: "Annual Audited Reports" },
+      { href: "/code-of-conduct", label: "Code of Conduct & Ethics" },
+      { href: "/code-of-conduct", label: "Child Safeguarding Policy" },
+      { href: "/bylaws", label: "Proposed Bylaws & Framework" },
+      { href: "/resources", label: "Official Brand Kit & Reports" },
       { href: "/contact#membership", label: "CAD $100 Voting Membership" },
     ],
     programs: [
@@ -306,7 +306,7 @@ export default function Footer() {
               <Link href="/terms" className="hover:text-white transition-colors">
                 Terms of Use
               </Link>
-              <Link href="/resources#conduct" className="hover:text-white transition-colors">
+              <Link href="/code-of-conduct" className="hover:text-white transition-colors">
                 Code of Conduct
               </Link>
               <Link href="/contact" className="hover:text-white transition-colors">
