@@ -191,18 +191,18 @@ export default function AboutPage() {
               <div className="grid grid-cols-2 gap-4 pt-4 border-t border-purple-50">
                 <div className="p-4 rounded-2xl bg-[var(--surface)]">
                   <div className="text-2xl font-extrabold text-[var(--foundation-primary)]">
-                    Canada & Cameroon
+                    Global Mission
                   </div>
                   <div className="text-xs text-[var(--foreground-muted)] mt-1">
-                    Dual active non-profit chapters
+                    Canada, Cameroon & Worldwide
                   </div>
                 </div>
                 <div className="p-4 rounded-2xl bg-[var(--surface)]">
                   <div className="text-2xl font-extrabold text-[var(--foundation-accent)]">
-                    Public Benefit
+                    100% Non-Profit
                   </div>
                   <div className="text-xs text-[var(--foreground-muted)] mt-1">
-                    100% Non-profit charity
+                    Public benefit & CRA compliant
                   </div>
                 </div>
               </div>

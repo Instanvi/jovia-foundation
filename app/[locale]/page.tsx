@@ -246,46 +246,66 @@ export default function Home() {
       {/* =========================================================================
           3. CORE FOUNDATION FOCUS STRIP
           ========================================================================= */}
-      <section className="py-12 bg-white border-y border-purple-50">
+      <section className="py-14 bg-gradient-to-b from-white to-[var(--background-alt)] border-y border-purple-100/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-            <div className="space-y-1">
-              <div className="flex items-center justify-center gap-2 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[var(--foundation-primary)]">
-                <Medal weight="bold" className="w-7 h-7 sm:w-9 sm:h-9" />
-                5 Pillars
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+            {/* Metric 1: 5 Mandates */}
+            <div className="p-6 sm:p-7 rounded-3xl bg-white border border-purple-100/80 shadow-[0_4px_20px_-4px_rgba(123,2,246,0.04)] hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col items-center text-center space-y-3 group">
+              <div className="w-12 h-12 rounded-2xl bg-purple-100 text-[var(--foundation-primary)] flex items-center justify-center group-hover:scale-110 transition-transform">
+                <Medal weight="bold" className="w-6 h-6" />
               </div>
-              <div className="text-xs sm:text-sm font-semibold text-[var(--foreground-muted)]">
-                Education, Health, Respite, Inclusion & Relief
-              </div>
-            </div>
-
-            <div className="space-y-1">
-              <div className="flex items-center justify-center gap-2 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[var(--foundation-accent)]">
-                <Globe weight="bold" className="w-7 h-7 sm:w-9 sm:h-9" />
-                2 Chapters
-              </div>
-              <div className="text-xs sm:text-sm font-semibold text-[var(--foreground-muted)]">
-                Canada & Cameroon Operational Programs
+              <div className="space-y-1">
+                <div className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[var(--foundation-primary)] tracking-tight whitespace-nowrap">
+                  5 Mandates
+                </div>
+                <p className="text-xs sm:text-sm font-semibold text-[var(--foreground-muted)] leading-snug">
+                  Education, Health, Respite, Inclusion & Relief
+                </p>
               </div>
             </div>
 
-            <div className="space-y-1">
-              <div className="flex items-center justify-center gap-2 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-emerald-600">
-                <ShieldCheck weight="bold" className="w-7 h-7 sm:w-9 sm:h-9" />
-                100%
+            {/* Metric 2: Global Reach */}
+            <div className="p-6 sm:p-7 rounded-3xl bg-white border border-purple-100/80 shadow-[0_4px_20px_-4px_rgba(123,2,246,0.04)] hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col items-center text-center space-y-3 group">
+              <div className="w-12 h-12 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center group-hover:scale-110 transition-transform">
+                <Globe weight="bold" className="w-6 h-6" />
               </div>
-              <div className="text-xs sm:text-sm font-semibold text-[var(--foreground-muted)]">
-                Non-Profit Public Benefit Purpose
+              <div className="space-y-1">
+                <div className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-amber-600 tracking-tight whitespace-nowrap">
+                  Global Reach
+                </div>
+                <p className="text-xs sm:text-sm font-semibold text-[var(--foreground-muted)] leading-snug">
+                  Canada, Cameroon & Worldwide Programs
+                </p>
               </div>
             </div>
 
-            <div className="space-y-1">
-              <div className="flex items-center justify-center gap-2 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-purple-800">
-                <Heart weight="fill" className="w-7 h-7 sm:w-9 sm:h-9" />
-                0 Stigma
+            {/* Metric 3: 100% Non-Profit */}
+            <div className="p-6 sm:p-7 rounded-3xl bg-white border border-purple-100/80 shadow-[0_4px_20px_-4px_rgba(123,2,246,0.04)] hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col items-center text-center space-y-3 group">
+              <div className="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center group-hover:scale-110 transition-transform">
+                <ShieldCheck weight="bold" className="w-6 h-6" />
               </div>
-              <div className="text-xs sm:text-sm font-semibold text-[var(--foreground-muted)]">
-                Unwavering Dignity & Inclusion for Every Child
+              <div className="space-y-1">
+                <div className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-emerald-600 tracking-tight whitespace-nowrap">
+                  100% Non-Profit
+                </div>
+                <p className="text-xs sm:text-sm font-semibold text-[var(--foreground-muted)] leading-snug">
+                  Public Benefit Charity & Full Governance Integrity
+                </p>
+              </div>
+            </div>
+
+            {/* Metric 4: Zero Stigma */}
+            <div className="p-6 sm:p-7 rounded-3xl bg-white border border-purple-100/80 shadow-[0_4px_20px_-4px_rgba(123,2,246,0.04)] hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col items-center text-center space-y-3 group">
+              <div className="w-12 h-12 rounded-2xl bg-rose-100 text-rose-600 flex items-center justify-center group-hover:scale-110 transition-transform">
+                <Heart weight="fill" className="w-6 h-6 text-rose-600" />
+              </div>
+              <div className="space-y-1">
+                <div className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-purple-900 tracking-tight whitespace-nowrap">
+                  Zero Stigma
+                </div>
+                <p className="text-xs sm:text-sm font-semibold text-[var(--foreground-muted)] leading-snug">
+                  Unwavering Dignity & Equal Inclusion for Every Child
+                </p>
               </div>
             </div>
           </div>
