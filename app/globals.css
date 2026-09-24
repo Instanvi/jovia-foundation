@@ -1,0 +1,291 @@
+@import "tailwindcss";
+
+/* ============================================
+   JOVIA FOUNDATION - OFFICIAL DESIGN SYSTEM
+   Theme Primary Color: #7B02F6 (Electric Royal Purple)
+   Inspired by Liliane Fonds & Jovia Official Identity
+   ============================================ */
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+}
+
+:root {
+  /* ─── Primary Brand Color (#7B02F6 Electric Royal Purple) ─── */
+  --foundation-primary: #7b02f6;
+  --foundation-primary-hover: #6502ca;
+  --foundation-primary-dark: #490096;
+  --foundation-primary-darker: #280054;
+  --foundation-primary-light: #f3e8ff;
+  --foundation-primary-subtle: #faf5ff;
+  --foundation-primary-glow: rgba(123, 2, 246, 0.25);
+
+  /* ─── Accent / Action Color (Sun Gold & Warm Amber from Logo) ─── */
+  --foundation-accent: #f59e0b;
+  --foundation-accent-hover: #d97706;
+  --foundation-accent-dark: #b45309;
+  --foundation-accent-light: #fef3c7;
+  --foundation-accent-glow: rgba(245, 158, 11, 0.35);
+
+  /* ─── Logo Supporting Colors ─── */
+  --foundation-green: #22c55e;
+  --foundation-green-dark: #15803d;
+  --foundation-green-light: #dcfce7;
+
+  --foundation-coral: #e11d48;
+  --foundation-coral-light: #ffe4e6;
+
+  --foundation-gold: #dba435;
+  --foundation-gold-light: #fef9e7;
+
+  /* ─── Backgrounds & Surfaces ─── */
+  --background: #ffffff;
+  --background-alt: #fbfafc;
+  --surface: #f6f3fa;
+  --surface-raised: #ffffff;
+  --surface-muted: #ece6f5;
+  --foundation-dark: #16062b;
+  --foundation-darker: #0d021c;
+
+  /* ─── Foreground & Text ─── */
+  --foreground: #140b24;
+  --foreground-muted: #56486d;
+  --foreground-subtle: #897a9f;
+  --foreground-inverted: #ffffff;
+
+  /* ─── Borders ─── */
+  --border-custom: #e9e2f3;
+  --border-subtle: #f2edf9;
+  --border-hover: #cbb8e8;
+  --border-focus: #7b02f6;
+
+  /* ─── Shadows ─── */
+  --shadow-soft: 0 4px 20px -2px rgba(123, 2, 246, 0.06);
+  --shadow-card: 0 10px 30px -5px rgba(123, 2, 246, 0.08);
+  --shadow-large: 0 20px 50px -10px rgba(123, 2, 246, 0.16);
+  --shadow-primary-glow: 0 10px 30px -5px rgba(123, 2, 246, 0.35);
+  --shadow-accent-glow: 0 10px 30px -5px rgba(245, 158, 11, 0.35);
+
+  /* ─── Typography ─── */
+  --font-base: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-background-alt: var(--background-alt);
+  --color-surface: var(--surface);
+  --color-surface-raised: var(--surface-raised);
+  --color-surface-muted: var(--surface-muted);
+
+  --color-foreground: var(--foreground);
+  --color-foreground-muted: var(--foreground-muted);
+  --color-foreground-subtle: var(--foreground-subtle);
+  --color-foreground-inverted: var(--foreground-inverted);
+
+  --color-foundation-primary: var(--foundation-primary);
+  --color-foundation-primary-hover: var(--foundation-primary-hover);
+  --color-foundation-primary-dark: var(--foundation-primary-dark);
+  --color-foundation-primary-darker: var(--foundation-primary-darker);
+  --color-foundation-primary-light: var(--foundation-primary-light);
+  --color-foundation-primary-subtle: var(--foundation-primary-subtle);
+
+  --color-foundation-accent: var(--foundation-accent);
+  --color-foundation-accent-hover: var(--foundation-accent-hover);
+  --color-foundation-accent-dark: var(--foundation-accent-dark);
+  --color-foundation-accent-light: var(--foundation-accent-light);
+
+  --color-foundation-green: var(--foundation-green);
+  --color-foundation-green-dark: var(--foundation-green-dark);
+  --color-foundation-green-light: var(--foundation-green-light);
+
+  --color-foundation-coral: var(--foundation-coral);
+  --color-foundation-coral-light: var(--foundation-coral-light);
+
+  --color-foundation-gold: var(--foundation-gold);
+  --color-foundation-gold-light: var(--foundation-gold-light);
+
+  --color-foundation-dark: var(--foundation-dark);
+  --color-foundation-darker: var(--foundation-darker);
+
+  --color-border-custom: var(--border-custom);
+  --color-border-subtle: var(--border-subtle);
+  --color-border-hover: var(--border-hover);
+
+  --font-sans: var(--font-base);
+  --font-heading: var(--font-base);
+}
+
+/* ─── Global Resets & Base Styles ─── */
+html {
+  scroll-behavior: smooth;
+  background-color: var(--background);
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-base);
+  font-size: 1rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ─── Typography & Base Styles ─── */
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-base);
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    line-height: 1.2;
+  }
+}
+
+/* ─── Custom Scrollbar ─── */
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--surface);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbb8e8;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--foundation-primary);
+}
+
+/* ─── Text Gradients ─── */
+.text-gradient-primary {
+  background: linear-gradient(135deg, #7b02f6 0%, #9d3bf8 50%, #6502ca 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-accent {
+  background: linear-gradient(135deg, #f59e0b 0%, #f97316 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-purple-gold {
+  background: linear-gradient(135deg, #7b02f6 0%, #d97706 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ─── Background Canvases ─── */
+.hero-gradient-canvas {
+  position: relative;
+  background: radial-gradient(120% 120% at 50% -10%, #ffffff 0%, #faf6ff 60%, #f1e8ff 100%);
+}
+
+.hero-mesh-glow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: 
+    radial-gradient(55% 45% at 20% 15%, rgba(123, 2, 246, 0.08), transparent 70%),
+    radial-gradient(45% 45% at 85% 25%, rgba(245, 158, 11, 0.09), transparent 65%),
+    radial-gradient(50% 50% at 50% 90%, rgba(34, 197, 94, 0.06), transparent 70%);
+}
+
+.pattern-dots {
+  background-image: radial-gradient(var(--foundation-primary) 1px, transparent 1px);
+  background-size: 24px 24px;
+  opacity: 0.06;
+}
+
+/* ─── Animations ─── */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes floatGentle {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes pulseSlow {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.85; }
+}
+
+@keyframes heartBeat {
+  0%, 100% { transform: scale(1); }
+  14% { transform: scale(1.15); }
+  28% { transform: scale(1); }
+  42% { transform: scale(1.15); }
+  70% { transform: scale(1); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.animate-float-gentle {
+  animation: floatGentle 5s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulseSlow 3s ease-in-out infinite;
+}
+
+.animate-heart-beat {
+  animation: heartBeat 2s ease-in-out infinite;
+}
+
+/* ─── Glassmorphism & Surface Utilities ─── */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.glass-panel-dark {
+  background: rgba(22, 6, 43, 0.85);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.shadow-primary-glow {
+  box-shadow: var(--shadow-primary-glow);
+}
+
+.shadow-accent-glow {
+  box-shadow: var(--shadow-accent-glow);
+}
+
+/* ─── Focus States (WCAG 2.1 AA Compliant) ─── */
+:focus-visible {
+  outline: 2px solid var(--foundation-primary);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
