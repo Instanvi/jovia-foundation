@@ -63,10 +63,6 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
             {/* Left Content Column (7 cols) */}
             <div className="lg:col-span-7 space-y-6 lg:space-y-8 animate-fade-in">
-              <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-[var(--foundation-primary-light)] text-[var(--foundation-primary)] rounded-full text-xs sm:text-sm font-extrabold shadow-sm border border-[var(--foundation-primary)]/20">
-                <span className="w-2.5 h-2.5 rounded-full bg-[var(--foundation-accent)] animate-pulse" />
-                Joseph's Opportunities, Values, Inclusion & Ability
-              </div>
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.12] text-[var(--foreground)]">
                 Building Hope. <br />
