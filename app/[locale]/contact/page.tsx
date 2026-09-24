@@ -77,7 +77,7 @@ export default function ContactPage() {
               <span className="text-gradient-primary">JOVIA Foundation</span>
             </h1>
             <p className="text-lg sm:text-xl text-[var(--foreground-muted)] leading-relaxed">
-              We welcome your inquiries, volunteer applications, partnership proposals, CAD $100
+              We welcome your inquiries, volunteer applications, partnership proposals, Community
               voting membership submissions, and general questions.
             </p>
           </div>
@@ -119,13 +119,13 @@ export default function ContactPage() {
                 <div className="p-6 rounded-3xl bg-[var(--surface)] border border-purple-100 space-y-3">
                   <div className="flex items-center gap-2 text-sm font-bold text-[var(--foundation-primary)]">
                     <MapPin weight="bold" className="w-5 h-5 text-emerald-600" />
-                    Cameroon Field Program Hub
+                    Cameroon Program Hub (Douala)
                   </div>
                   <p className="text-xs sm:text-sm text-[var(--foreground-muted)] leading-relaxed pl-7">
-                    Commercial Avenue, P.O. Box 450, Bamenda / Yaoundé, Centre Region, Cameroon
+                    Boulevard de la Liberté, Akwa / Bonanjo, Douala, Littoral Region, Cameroun
                   </p>
                   <div className="pl-7 text-xs font-semibold text-[var(--foreground)]">
-                    Field Line: +237 670 000 000
+                    Direct Line: +237 670 000 000
                   </div>
                 </div>
 
@@ -275,7 +275,7 @@ export default function ContactPage() {
                         >
                           <option value="general">General Inquiry</option>
                           <option value="membership">
-                            Apply for Voting Membership (CAD $100/yr)
+                            Apply for Community Membership (Community/yr)
                           </option>
                           <option value="volunteer">Volunteer / Field Work</option>
                           <option value="partner">Organizational Partnership</option>
@@ -348,9 +348,9 @@ export default function ContactPage() {
               <div className="w-16 h-16 rounded-2xl bg-purple-50 text-[var(--foundation-primary)] flex items-center justify-center mx-auto">
                 <FileText weight="bold" className="w-8 h-8" />
               </div>
-              <h4 className="text-xl font-bold text-[var(--foreground)]">Voting Membership</h4>
+              <h4 className="text-xl font-bold text-[var(--foreground)]">Community Membership</h4>
               <p className="text-xs sm:text-sm text-[var(--foreground-muted)] leading-relaxed">
-                Join our voting members (CAD $100/yr) to support our mission and vote at the Annual General Meeting.
+                Join our community membership to support our mission and participate actively in our general meetings.
               </p>
             </div>
 
@@ -380,7 +380,7 @@ export default function ContactPage() {
                 Directly fund mobility carts, accessible desks, and pediatric physiotherapy for disabled children.
               </p>
               <Button
-                href="/#donate"
+                href="/donate"
                 variant="primary"
                 size="sm"
                 className="font-bold"

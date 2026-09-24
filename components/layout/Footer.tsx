@@ -45,9 +45,9 @@ export default function Footer() {
     governance: [
       { href: "/code-of-conduct", label: "Code of Conduct & Ethics" },
       { href: "/code-of-conduct", label: "Child Safeguarding Policy" },
-      { href: "/bylaws", label: "Proposed Bylaws & Framework" },
+      { href: "/bylaws", label: "Official Bylaws & Framework" },
       { href: "/resources", label: "Official Brand Kit & Reports" },
-      { href: "/contact#membership", label: "CAD $100 Voting Membership" },
+      { href: "/contact#membership", label: "Community Membership & Volunteering" },
     ],
     programs: [
       { href: "/about#programs", label: "Child Development & Education" },
@@ -78,7 +78,7 @@ export default function Footer() {
               </h3>
               <p className="text-sm text-purple-100 max-w-lg">
                 Subscribe to receive quarterly impact updates, inspiring field stories, and
-                governance reports from Canada and Cameroon.
+                governance reports from our global mission in Canada, Cameroon, and worldwide.
               </p>
             </div>
 
@@ -148,7 +148,7 @@ export default function Footer() {
               </p>
               <p className="text-sm text-purple-100 leading-relaxed">
                 Dedicated to improving opportunities, dignity, and quality of life for children
-                and youth with disabilities and their families in Canada and Cameroon through
+                and youth with disabilities and their families globally through
                 inclusive education, healthcare, mobility equipment, and community empowerment.
               </p>
             </div>
@@ -257,10 +257,10 @@ export default function Footer() {
               <div className="p-3.5 rounded-2xl bg-white/10 border border-white/10 space-y-1">
                 <div className="font-bold text-white flex items-center gap-1.5 text-xs sm:text-sm">
                   <MapPin weight="bold" className="w-4 h-4 text-emerald-400" />
-                  Cameroon Field Hub
+                  Cameroon Regional Hub
                 </div>
                 <p className="text-purple-100 pl-5">
-                  Commercial Avenue, P.O. Box 450, Bamenda / Yaoundé, Cameroon
+                  Boulevard de la Liberté, Akwa, Douala / Yaoundé, Cameroon
                 </p>
               </div>
 

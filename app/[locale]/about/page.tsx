@@ -43,7 +43,7 @@ export default function AboutPage() {
             <p className="text-base sm:text-lg text-[var(--foreground-muted)] leading-relaxed">
               JOVIA Foundation (Joseph's Opportunities, Values, Inclusion & Ability) was established
               to create a world where every child with a disability is valued, included, and
-              empowered to develop their abilities and reach their potential in Canada and Cameroon.
+              empowered to develop their abilities and reach their potential in Canada, Cameroon, and worldwide.
             </p>
             <div className="pt-2 flex flex-wrap gap-4">
               <Button href="/contact#donate" variant="primary" size="lg" className="font-bold">
@@ -245,7 +245,7 @@ export default function AboutPage() {
               </div>
               <h3 className="text-2xl font-bold text-[var(--foreground)]">Our Mission</h3>
               <p className="text-base text-[var(--foreground-muted)] leading-relaxed">
-                JOVIA Foundation works to improve opportunities and quality of life for children and youth with disabilities and their families by improving access to educational, developmental, health-supporting and social programs; providing appropriate resources and supports; strengthening families; promoting dignity and inclusion; and reducing barriers associated with poverty, stigma, exclusion and lack of services, with programs in Canada and Cameroon.
+                JOVIA Foundation works to improve opportunities and quality of life for children and youth with disabilities and their families by improving access to educational, developmental, health-supporting and social programs; providing appropriate resources and supports; strengthening families; promoting dignity and inclusion; and reducing barriers associated with poverty, stigma, exclusion and lack of services, with programs in Canada, Cameroon, and worldwide.
               </p>
             </div>
           </div>
@@ -373,7 +373,7 @@ export default function AboutPage() {
               Our 5 Core Program Mandates
             </h2>
             <p className="text-base text-[var(--foreground-muted)]">
-              Formal charitable purposes established in Canada and Cameroon.
+              Formal charitable purposes established in Canada, Cameroon, and worldwide.
             </p>
           </div>
 
@@ -382,7 +382,7 @@ export default function AboutPage() {
               {
                 num: "01",
                 title: "Poverty Relief for Children with Disabilities",
-                desc: "Relieving poverty among children and youth with disabilities and their families in Canada and Cameroon by providing or facilitating access to necessities of life and disability-related supports, including food, clothing, assistive devices, mobility aids, adaptive equipment, and basic hardship relief.",
+                desc: "Relieving poverty among children and youth with disabilities and their families in Canada, Cameroon, and globally by providing or facilitating access to necessities of life and disability-related supports, including food, clothing, assistive devices, mobility aids, adaptive equipment, and basic hardship relief.",
               },
               {
                 num: "02",
@@ -431,10 +431,10 @@ export default function AboutPage() {
                   Long-Term Strategic Initiative
                 </div>
                 <h3 className="text-2xl sm:text-3xl font-bold text-[var(--foreground)]">
-                  The Cameroon Centre Initiative
+                  The Douala Regional Centre Initiative (Centre Régional d'Inclusion)
                 </h3>
                 <p className="text-sm sm:text-base text-[var(--foreground-muted)] leading-relaxed">
-                  Development of a permanent, sustainable centre and program hub in Cameroon as a central
+                  Development of a permanent, sustainable hub in Douala, Littoral Region, Cameroun (Centre Régional de Réhabilitation et d'Apprentissage Inclusif) as a central
                   facility for delivering JOVIA’s pediatric rehabilitation, adaptive classrooms,
                   caregiver training, and assistive device assembly programs.
                 </p>
@@ -508,7 +508,7 @@ export default function AboutPage() {
 
               <div className="pt-2 flex flex-wrap gap-4">
                 <Button href="/bylaws" variant="primary" size="default" className="font-bold">
-                  View Proposed Bylaws
+                  View Official Bylaws
                 </Button>
                 <Button href="/code-of-conduct" variant="outline" size="default" className="font-bold border-2 border-[var(--foundation-primary)] text-[var(--foundation-primary)]">
                   View Code of Conduct
@@ -523,7 +523,7 @@ export default function AboutPage() {
                   Child Safeguarding Procedures
                 </div>
                 <p className="text-xs sm:text-sm text-[var(--foreground-muted)] leading-relaxed">
-                  Strict screening, vulnerable-sector background checks, supervision rules, and mandatory reporting protocols across all Canada and Cameroon projects.
+                  Strict screening, vulnerable-sector background checks, supervision rules, and mandatory reporting protocols across all global programs in Canada and Cameroon.
                 </p>
               </div>
 
@@ -540,7 +540,7 @@ export default function AboutPage() {
               <div className="p-6 rounded-2xl bg-[var(--surface)] border border-purple-50 space-y-2">
                 <div className="flex items-center gap-2 font-bold text-[var(--foundation-primary)]">
                   <FileText weight="bold" className="w-5 h-5 text-purple-600" />
-                  CAD $100 Annual Voting Membership
+                  Community Annual Voting Membership
                 </div>
                 <p className="text-xs sm:text-sm text-[var(--foreground-muted)] leading-relaxed">
                   Individual voting members help maintain democratic oversight, approve financial statements, and elect the Board of Directors at the Annual General Meeting.

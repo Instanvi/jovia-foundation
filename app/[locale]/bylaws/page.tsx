@@ -42,9 +42,9 @@ export default function BylawsPage() {
       title: "Charitable Objects & Non-Profit Purpose",
       icon: ShieldCheck,
       color: "bg-emerald-100 text-emerald-700",
-      summary: "Five official charitable mandates across Canada and Cameroon.",
+      summary: "Five official charitable mandates in Canada, Cameroon, and worldwide.",
       content: [
-        "Object 1 (Poverty Relief): Relieving poverty among children with disabilities and their families in Canada and Cameroon by providing food, clothing, assistive devices, and basic hardship relief.",
+        "Object 1 (Poverty Relief): Relieving poverty among children with disabilities and their families in Canada, Cameroon, and globally by providing food, clothing, assistive devices, and basic hardship relief.",
         "Object 2 (Inclusive Education): Providing adaptive learning tools, accessible classroom equipment, communication aids, literacy programs, and inclusive teacher training.",
         "Object 3 (Health & Mobility Promotion): Facilitating access to pediatric physiotherapy, rehabilitation therapies, wheelchairs, and all-terrain mobility carts.",
         "Object 4 (Caregiver & Community Respite): Reducing family isolation through peer caregiver support circles, respite care navigation, and livelihood micro-grants.",
@@ -56,12 +56,12 @@ export default function BylawsPage() {
       title: "Membership Classification & Voting Rights",
       icon: Users,
       color: "bg-amber-100 text-amber-700",
-      summary: "Voting Members (CAD $100/yr), Associate Members, and Honorary Members.",
+      summary: "Voting Members (Community/yr), Associate Members, and Honorary Members.",
       content: [
-        "Voting Members: Any individual who supports the Foundation’s objects, is approved by the Board, and pays the annual membership fee of CAD $100.00. Each Voting Member holds one (1) vote at General Meetings.",
+        "Voting Members: Any individual who supports the Foundation’s objects, is approved by the Board, and pays the annual membership fee of Community.00. Each Voting Member holds one (1) vote at General Meetings.",
         "Associate / Beneficiary Members: Children, families, and recipients of programs who participate in activities without paying membership fees (non-voting).",
         "Honorary Members: Conferred by the Board of Directors upon distinguished advocates or donors (non-voting unless also holding active voting membership).",
-        "Termination & Discipline: Membership ceases upon written resignation, non-payment of annual dues after 60 days' notice, or special resolution of the Board for conduct detrimental to the Foundation.",
+        "Termination & Discipline: Membership ceases upon written resignation, special resolution of the Board for conduct detrimental to the Foundation.",
       ],
     },
     {
@@ -173,7 +173,7 @@ export default function BylawsPage() {
             Governing Bylaws & Corporate Constitution
           </div>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 tracking-tight leading-[1.15]">
-            Proposed Bylaws & <br className="hidden sm:inline" />
+            Official Bylaws & <br className="hidden sm:inline" />
             <span className="text-gradient-primary">Governing Framework</span>
           </h1>
           <p className="text-base sm:text-lg text-gray-600 leading-relaxed max-w-3xl">
@@ -243,12 +243,12 @@ export default function BylawsPage() {
           <div className="space-y-1 text-center sm:text-left">
             <h3 className="text-xl font-bold text-gray-900">Have Questions About Our Governance?</h3>
             <p className="text-sm text-gray-600">
-              Contact our Board of Directors or apply for the CAD $100 annual voting membership.
+              Contact our Board of Directors or apply for the Community annual voting membership.
             </p>
           </div>
           <div className="flex flex-wrap gap-3">
             <Button href="/contact#membership" variant="primary" size="default" className="font-bold">
-              Apply for Voting Membership
+              Apply for Community Membership
             </Button>
             <Button onClick={handlePrint} variant="outline" size="default" className="font-bold border-gray-200">
               <Printer weight="bold" className="w-4 h-4" />

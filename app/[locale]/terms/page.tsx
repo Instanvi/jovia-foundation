@@ -60,7 +60,7 @@ export default function TermsPage() {
               </div>
               <p className="text-gray-700 pl-12 leading-relaxed">
                 JOVIA Foundation operates strictly for the public benefit of eligible children and youth
-                with disabilities and their families in Canada and Cameroon. All resources, content, and
+                with disabilities and their families in Canada, Cameroon, and worldwide. All resources, content, and
                 publications are shared to foster inclusion, educational access, and disability rights advocacy.
               </p>
             </div>
@@ -81,7 +81,7 @@ export default function TermsPage() {
                   accordance with Canadian and international non-profit regulations.
                 </p>
                 <p>
-                  Annual voting memberships (CAD $100) are subject to Board approval under Article 3 of the
+                  Annual voting memberships (Community) are subject to Board approval under Article 3 of the
                   JOVIA Foundation Bylaws.
                 </p>
               </div>
@@ -111,7 +111,7 @@ export default function TermsPage() {
                     governance@joviafoundation.org • info@joviafoundation.org
                   </p>
                   <p className="text-xs text-gray-500">
-                    JOVIA Foundation Administrative Office • Alberta / Ontario, Canada & Bamenda, Cameroon
+                    JOVIA Foundation Governance Offices • Alberta / Ontario, Canada & Douala, Littoral Region, Cameroun
                   </p>
                 </div>
               </div>

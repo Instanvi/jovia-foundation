@@ -49,7 +49,7 @@ export default function Header() {
           <div className="flex items-center space-x-6">
             <span className="inline-flex items-center text-purple-200 font-medium">
               <span className="w-2 h-2 rounded-full bg-[var(--foundation-accent)] animate-pulse mr-2" />
-              Canada & Cameroon • Every Child Deserves a Chance to Thrive
+              Global Mission • Every Child Deserves a Chance to Thrive
             </span>
             <span className="text-white/20">|</span>
             <a
@@ -177,7 +177,7 @@ export default function Header() {
               </Button>
 
               <Button
-                href="/contact#donate"
+                href="/donate"
                 variant="primary"
                 size="default"
                 className="gap-2 font-bold px-6 shadow-md hover:shadow-primary-glow"
@@ -190,7 +190,7 @@ export default function Header() {
             {/* Mobile Menu Toggle */}
             <div className="flex items-center gap-2 md:hidden">
               <Button
-                href="/contact#donate"
+                href="/donate"
                 variant="primary"
                 size="sm"
                 className="font-bold px-3 py-1.5 text-xs"
@@ -221,7 +221,7 @@ export default function Header() {
           <div className="px-5 pt-4 pb-6 space-y-2">
             <div className="p-3 bg-[var(--foundation-primary-light)] rounded-2xl mb-3 flex items-center justify-between">
               <div className="text-xs font-semibold text-[var(--foundation-primary)]">
-                Active in Canada & Cameroon
+                Global Programs & Regional Hubs
               </div>
               <span className="text-[11px] font-bold text-[var(--foundation-accent)]">
                 Registered NGO
@@ -252,7 +252,7 @@ export default function Header() {
               </Button>
 
               <Button
-                href="/contact#donate"
+                href="/donate"
                 variant="primary"
                 size="lg"
                 onClick={() => setIsMobileMenuOpen(false)}

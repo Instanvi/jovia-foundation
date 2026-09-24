@@ -139,7 +139,7 @@ export default function CodeOfConductPage() {
               <p className="text-base sm:text-lg text-gray-600 leading-relaxed max-w-2xl">
                 JOVIA Foundation is committed to creating safe, respectful, and inclusive environments for
                 children and youth with disabilities, their families, volunteers, staff, and communities
-                across Canada and Cameroon.
+                in Canada, Cameroon, and worldwide.
               </p>
 
               <div className="pt-2 flex flex-wrap items-center gap-4 text-xs font-semibold text-gray-500 border-t border-purple-50">

@@ -54,7 +54,7 @@ export default function ResourcesPage() {
       category: "mobility",
       categoryLabel: "Mobility & Health",
       image: "/images/younggirlwheelchair.avif",
-      location: "Bamenda, Northwest Region, Cameroon",
+      location: "Douala, Littoral Region, Cameroon",
       date: "January 2026",
       description:
         "Customized pediatric wheelchair fitting providing newfound mobility, independence, and joyful inclusion in school and community life.",
@@ -65,7 +65,7 @@ export default function ResourcesPage() {
       category: "mobility",
       categoryLabel: "Mobility & Health",
       image: "/images/nursechild.avif",
-      location: "Bafut Health Clinic, Cameroon",
+      location: "Littoral Health Clinic, Douala, Cameroon",
       date: "January 2026",
       description:
         "Qualified nursing and pediatric physiotherapy specialists delivering posture evaluations, clinical care, and rehabilitation therapies.",
@@ -76,7 +76,7 @@ export default function ResourcesPage() {
       category: "community",
       categoryLabel: "Field Team & Community",
       image: "/images/poordisabledafrican.avif",
-      location: "Mezam Division, Cameroon",
+      location: "Littoral Region, Cameroon",
       date: "December 2025",
       description:
         "Reaching the most vulnerable children in underserved rural villages with essential nutrition, clothing, medical supplies, and barrier-breaking support.",
@@ -175,7 +175,7 @@ export default function ResourcesPage() {
       category: "community",
       categoryLabel: "Field Team & Community",
       image: "/images/disabledchildlaughing.png",
-      location: "Bamenda Inclusive Park, Cameroon",
+      location: "Douala Inclusive Park, Littoral Region, Cameroon",
       date: "July 2025",
       description:
         "Barrier-free recreational activities and joyful play sessions breaking down stigma and fostering pure childhood joy.",
@@ -197,7 +197,7 @@ export default function ResourcesPage() {
       category: "community",
       categoryLabel: "Field Team & Community",
       image: "/images/disabledchildrengroup.jpg",
-      location: "Mezam Community Gathering, Cameroon",
+      location: "Douala Community Gathering, Cameroon",
       date: "June 2025",
       description:
         "Uniting families and youth with disabilities for grassroots community forums, mutual support, and public awareness campaigns.",
@@ -208,7 +208,7 @@ export default function ResourcesPage() {
       category: "mobility",
       categoryLabel: "Mobility & Health",
       image: "/images/handicapchildren.webp",
-      location: "Northwest Clinic, Cameroon",
+      location: "Littoral Clinic, Douala, Cameroon",
       date: "May 2025",
       description:
         "Fitting children with specialized crutches, walkers, and adaptive orthotics tailored to terrain challenges.",
@@ -230,7 +230,7 @@ export default function ResourcesPage() {
       category: "education",
       categoryLabel: "Inclusive Classrooms",
       image: "/images/teachersdisabledchildern.webp",
-      location: "Bamenda Education Center, Cameroon",
+      location: "Douala Education Center, Littoral Region, Cameroon",
       date: "April 2025",
       description:
         "Workshops for educators on multimodal teaching strategies, accessible learning tools, and inclusive classroom management.",
@@ -350,7 +350,7 @@ export default function ResourcesPage() {
             </h1>
             <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
               Explore field photography, adaptive classroom breakthroughs, mobility distributions,
-              and community stories from our ongoing humanitarian mission in Canada and Cameroon.
+              and community stories from our ongoing humanitarian mission in Canada, Cameroon, and worldwide.
             </p>
           </div>
 
@@ -503,13 +503,13 @@ export default function ResourcesPage() {
               </div>
             </div>
 
-            {/* Card 3: Proposed Bylaws & Annual Report */}
+            {/* Card 3: Official Bylaws & Annual Report */}
             <div className="bg-white p-8 rounded-3xl border border-purple-100 shadow-sm hover:shadow-md transition-all space-y-4 flex flex-col justify-between">
               <div className="space-y-3">
                 <div className="w-12 h-12 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center font-bold">
                   <BookOpen weight="bold" className="w-6 h-6" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900">Proposed Bylaws & Framework</h3>
+                <h3 className="text-xl font-bold text-gray-900">Official Bylaws & Framework</h3>
                 <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
                   Complete 9-article governing framework under the Societies Act of Alberta, voting rights, and Board elections.
                 </p>
