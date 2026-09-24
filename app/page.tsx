@@ -109,7 +109,7 @@ export default function Home() {
                 <div className="flex -space-x-3 overflow-hidden">
                   {[
                     "/images/nursechild.avif",
-                    "/images/wheelchairperson.jpg",
+                    "/images/younggirlwheelchair.avif",
                     "/images/disabledperson.jpg",
                     "/images/womanchildtalking.avif",
                     "/images/poorwomantalking.avif",
@@ -128,74 +128,80 @@ export default function Home() {
                   ))}
                 </div>
                 <div className="text-xs sm:text-sm text-[var(--foreground-muted)]">
-                  <span className="font-extrabold text-[var(--foreground)]">Join 25,000+</span>{" "}
-                  supporters, families & partners in Canada & Cameroon
+                  <span className="font-extrabold text-[var(--foreground)]">Dedicated to Every Child</span>{" "}
+                  across Canada & Cameroon
                 </div>
               </div>
             </div>
 
-            {/* Right Visual Column (5 cols) - Sharp Geometric Multi-Photo Composition Directly on Canvas */}
+            {/* Right Visual Column (5 cols) - Clean, Balanced 2x2 Photo Grid */}
             <div className="lg:col-span-5 relative w-full flex items-center justify-center lg:justify-end">
-              <div className="relative w-full max-w-lg h-[460px] sm:h-[520px] lg:h-[560px]">
-                {/* Background Ambient Glows */}
-                <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-[var(--foundation-primary)]/15 blur-3xl -z-10 pointer-events-none" />
-                <div className="absolute bottom-1/4 right-6 w-60 h-60 bg-[var(--foundation-accent)]/20 blur-3xl -z-10 pointer-events-none" />
+              <div className="relative w-full max-w-lg">
+                {/* Background Ambient Glow */}
+                <div className="absolute -inset-4 bg-gradient-to-tr from-[var(--foundation-primary)]/15 to-[var(--foundation-accent)]/15 rounded-3xl blur-2xl -z-10 pointer-events-none" />
 
-                {/* Main Dominant Image (Large Upper-Right Diagonal Polygon - Child with Wheelchair) */}
-                <div
-                  className="absolute top-0 right-0 w-[80%] h-[70%] overflow-hidden shadow-2xl transition-transform duration-500 hover:scale-[1.02]"
-                  style={{ clipPath: "polygon(14% 0%, 100% 0%, 100% 100%, 0% 92%)" }}
-                >
-                  <Image
-                    src="/images/wheelchairperson.jpg"
-                    alt="Child with Wheelchair Supported by JOVIA Foundation"
-                    fill
-                    className="object-cover object-center"
-                    priority
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#140b24]/30 via-transparent to-transparent pointer-events-none" />
-                </div>
+                {/* 2x2 Clean Image Grid */}
+                <div className="grid grid-cols-2 gap-4">
+                  {/* Photo 1: Wheelchair Freedom */}
+                  <div className="relative h-48 sm:h-56 rounded-3xl overflow-hidden shadow-md border border-purple-100 group">
+                    <Image
+                      src="/images/younggirlwheelchair.avif"
+                      alt="Pediatric Wheelchair Freedom"
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      priority
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-3.5">
+                      <span className="text-[11px] font-bold text-white bg-black/40 backdrop-blur-sm px-2.5 py-1 rounded-full">
+                        Mobility Freedom
+                      </span>
+                    </div>
+                  </div>
 
-                {/* Top-Left Sharp Slanted Image (Nurse Caring for Child) */}
-                <div
-                  className="absolute top-10 left-0 w-[46%] h-[40%] overflow-hidden shadow-xl transition-transform duration-500 hover:scale-[1.02] border border-white/60"
-                  style={{ clipPath: "polygon(0% 0%, 100% 12%, 88% 100%, 0% 100%)" }}
-                >
-                  <Image
-                    src="/images/nursechild.avif"
-                    alt="Pediatric Healthcare and Care"
-                    fill
-                    className="object-cover object-center"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-tr from-[#7B02F6]/25 via-transparent to-transparent pointer-events-none" />
-                </div>
+                  {/* Photo 2: Pediatric Care */}
+                  <div className="relative h-48 sm:h-56 rounded-3xl overflow-hidden shadow-md border border-purple-100 group">
+                    <Image
+                      src="/images/nursechild.avif"
+                      alt="Pediatric Healthcare and Care"
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-3.5">
+                      <span className="text-[11px] font-bold text-white bg-black/40 backdrop-blur-sm px-2.5 py-1 rounded-full">
+                        Pediatric Care
+                      </span>
+                    </div>
+                  </div>
 
-                {/* Bottom-Right Sharp Diagonal Image (Child with Disability) */}
-                <div
-                  className="absolute bottom-0 right-6 w-[64%] h-[42%] overflow-hidden shadow-2xl transition-transform duration-500 hover:scale-[1.02] border border-white/60"
-                  style={{ clipPath: "polygon(12% 0%, 100% 8%, 100% 100%, 0% 100%)" }}
-                >
-                  <Image
-                    src="/images/disabledperson.jpg"
-                    alt="Child with Disability Included in Community"
-                    fill
-                    className="object-cover object-center"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-tr from-[#F59E0B]/20 via-transparent to-transparent pointer-events-none" />
-                </div>
+                  {/* Photo 3: Adaptive Education */}
+                  <div className="relative h-48 sm:h-56 rounded-3xl overflow-hidden shadow-md border border-purple-100 group">
+                    <Image
+                      src="/images/disabledperson.jpg"
+                      alt="Adaptive Education and Literacy"
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-3.5">
+                      <span className="text-[11px] font-bold text-white bg-black/40 backdrop-blur-sm px-2.5 py-1 rounded-full">
+                        Inclusive Education
+                      </span>
+                    </div>
+                  </div>
 
-                {/* Bottom-Left Sharp Angular Image (Caregiver Mother and Child) */}
-                <div
-                  className="absolute bottom-6 left-2 w-[40%] h-[34%] overflow-hidden shadow-lg transition-transform duration-500 hover:scale-[1.02] border border-white/60"
-                  style={{ clipPath: "polygon(0% 14%, 100% 0%, 88% 100%, 0% 86%)" }}
-                >
-                  <Image
-                    src="/images/womanchildtalking.avif"
-                    alt="Mother and Child Community Connection"
-                    fill
-                    className="object-cover object-center"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#7B02F6]/30 to-transparent pointer-events-none" />
+                  {/* Photo 4: Caregiver Connection */}
+                  <div className="relative h-48 sm:h-56 rounded-3xl overflow-hidden shadow-md border border-purple-100 group">
+                    <Image
+                      src="/images/womanchildtalking.avif"
+                      alt="Caregiver and Family Support"
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-3.5">
+                      <span className="text-[11px] font-bold text-white bg-black/40 backdrop-blur-sm px-2.5 py-1 rounded-full">
+                        Family Respite
+                      </span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -257,48 +263,48 @@ export default function Home() {
       </section>
 
       {/* =========================================================================
-          3. LIVE IMPACT NUMBERS STRIP
+          3. CORE FOUNDATION FOCUS STRIP
           ========================================================================= */}
       <section className="py-12 bg-white border-y border-purple-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
             <div className="space-y-1">
               <div className="flex items-center justify-center gap-2 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[var(--foundation-primary)]">
-                <Users weight="bold" className="w-7 h-7 sm:w-9 sm:h-9" />
-                2.4M+
+                <Medal weight="bold" className="w-7 h-7 sm:w-9 sm:h-9" />
+                5 Pillars
               </div>
               <div className="text-xs sm:text-sm font-semibold text-[var(--foreground-muted)]">
-                Lives Reached & Impacted
+                Education, Health, Respite, Inclusion & Relief
               </div>
             </div>
 
             <div className="space-y-1">
               <div className="flex items-center justify-center gap-2 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[var(--foundation-accent)]">
-                <BookOpen weight="bold" className="w-7 h-7 sm:w-9 sm:h-9" />
-                1,200+
+                <Globe weight="bold" className="w-7 h-7 sm:w-9 sm:h-9" />
+                2 Chapters
               </div>
               <div className="text-xs sm:text-sm font-semibold text-[var(--foreground-muted)]">
-                Inclusive Schools & Communities
+                Canada & Cameroon Operational Programs
               </div>
             </div>
 
             <div className="space-y-1">
               <div className="flex items-center justify-center gap-2 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-emerald-600">
-                <Heart weight="fill" className="w-7 h-7 sm:w-9 sm:h-9" />
-                3,500+
+                <ShieldCheck weight="bold" className="w-7 h-7 sm:w-9 sm:h-9" />
+                100%
               </div>
               <div className="text-xs sm:text-sm font-semibold text-[var(--foreground-muted)]">
-                Volunteers & Advocates Engaged
+                Non-Profit Public Benefit Purpose
               </div>
             </div>
 
             <div className="space-y-1">
               <div className="flex items-center justify-center gap-2 text-3xl sm:text-4xl lg:text-5xl font-extrabold text-purple-800">
-                <TrendUp weight="bold" className="w-7 h-7 sm:w-9 sm:h-9" />
-                $12M+
+                <Heart weight="fill" className="w-7 h-7 sm:w-9 sm:h-9" />
+                0 Stigma
               </div>
               <div className="text-xs sm:text-sm font-semibold text-[var(--foreground-muted)]">
-                Aid & Assistive Devices Mobilized
+                Unwavering Dignity & Inclusion for Every Child
               </div>
             </div>
           </div>
@@ -311,36 +317,27 @@ export default function Home() {
       <section className="py-20 lg:py-28 bg-white relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-            {/* Left Photo Collage (5 cols) */}
+            {/* Left Clean Photo Card (5 cols) */}
             <div className="lg:col-span-5 relative">
               <div className="relative mx-auto max-w-md">
-                <div className="absolute -inset-4 bg-gradient-to-tr from-[var(--foundation-primary-light)] to-[var(--foundation-accent-light)] rounded-full blur-xl opacity-80" />
-
-                <div className="relative w-64 h-64 sm:w-80 sm:h-80 mx-auto rounded-full ring-8 ring-white shadow-2xl overflow-hidden bg-purple-50">
+                <div className="absolute -inset-3 bg-gradient-to-tr from-[var(--foundation-primary-light)] to-[var(--foundation-accent-light)] rounded-3xl blur-xl opacity-70" />
+                <div className="relative h-[420px] sm:h-[480px] rounded-3xl overflow-hidden shadow-2xl border border-purple-100">
                   <Image
                     src="/images/poordisabledafrican.avif"
                     alt="African Child with Disability Supported by JOVIA"
                     fill
                     className="object-cover"
                   />
-                </div>
-
-                <div className="absolute -top-4 -right-2 w-28 h-28 sm:w-32 sm:h-32 rounded-full ring-4 ring-white shadow-xl overflow-hidden bg-purple-50">
-                  <Image
-                    src="/images/nursechild.avif"
-                    alt="Pediatric Clinical Support and Care"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-
-                <div className="absolute -bottom-4 -left-2 w-28 h-28 sm:w-32 sm:h-32 rounded-full ring-4 ring-white shadow-xl overflow-hidden bg-purple-50">
-                  <Image
-                    src="/images/poorwomantalking.avif"
-                    alt="Caregiver Mother Empowerment"
-                    fill
-                    className="object-cover"
-                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent flex items-end p-6">
+                    <div className="space-y-1 text-white">
+                      <span className="px-3 py-1 rounded-full text-xs font-bold bg-[var(--foundation-primary)] text-white inline-block shadow-sm">
+                        Grassroots Mission
+                      </span>
+                      <p className="text-sm font-bold">
+                        Reaching underserved children with assistive equipment & adaptive schooling
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -606,7 +603,7 @@ export default function Home() {
             <div className="bg-white rounded-3xl border border-purple-100 shadow-[0_10px_30px_-5px_rgba(123,2,246,0.06)] hover:shadow-2xl overflow-hidden transition-all duration-300 flex flex-col group">
               <div className="relative h-60 w-full overflow-hidden bg-purple-50">
                 <Image
-                  src="/images/wheelchairperson.jpg"
+                  src="/images/younggirlwheelchair.avif"
                   alt="Pediatric Wheelchairs & Mobility Supports"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -835,8 +832,8 @@ export default function Home() {
             >
               <div className="relative h-48 w-full overflow-hidden bg-purple-50">
                 <Image
-                  src="/images/deliveryboy.jpg"
-                  alt="All-Terrain Mobility Logistics"
+                  src="/images/youngchildthatcantwalk.webp"
+                  alt="Early Mobility & Rehabilitation"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
@@ -873,7 +870,7 @@ export default function Home() {
             >
               <div className="relative h-48 w-full overflow-hidden bg-purple-50">
                 <Image
-                  src="/images/meeting.jpg"
+                  src="/images/teacherandchild.jpg"
                   alt="Educator Inclusive Training"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -1186,8 +1183,8 @@ export default function Home() {
               <div className="lg:col-span-5 relative">
                 <div className="relative w-full h-56 sm:h-72 rounded-2xl overflow-hidden shadow-lg ring-4 ring-white">
                   <Image
-                    src="/images/consulting-team.jpg"
-                    alt="Volunteers and field team"
+                    src="/images/disablechildrenandmothers.jpg"
+                    alt="Volunteers, families and children"
                     fill
                     className="object-cover"
                   />

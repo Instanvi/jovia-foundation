@@ -3,15 +3,24 @@
 /* ============================================
    JOVIA FOUNDATION - OFFICIAL DESIGN SYSTEM
    Theme Primary Color: #7B02F6 (Electric Royal Purple)
+   Font Family: Manrope-Variable
    Inspired by Liliane Fonds & Jovia Official Identity
    ============================================ */
 
 @font-face {
-  font-family: 'Inter';
-  font-style: normal;
+  font-family: 'Manrope-Variable';
+  src: url('/fonts/manrope/Manrope-Variable.ttf') format('truetype');
   font-weight: 100 900;
+  font-style: normal;
   font-display: swap;
-  src: url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('/fonts/manrope/Manrope-Variable.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
 }
 
 :root {
@@ -71,7 +80,7 @@
   --shadow-accent-glow: 0 10px 30px -5px rgba(245, 158, 11, 0.35);
 
   /* ─── Typography ─── */
-  --font-base: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-base: 'Manrope-Variable', 'Manrope', var(--font-manrope), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
 @theme inline {

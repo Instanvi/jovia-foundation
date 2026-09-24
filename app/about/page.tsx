@@ -17,6 +17,7 @@ import {
   Building,
   Scales,
   FileText,
+  Quotes,
 } from "@phosphor-icons/react/dist/ssr";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
@@ -57,8 +58,86 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 1. Founding Inspiration & Story */}
-      <section id="story" className="py-20 bg-white">
+      {/* 1. A Word from the Founder (First Section & Founder Image) */}
+      <section id="founder-word" className="py-20 bg-white border-b border-purple-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            {/* Founder Image Card (5 cols) */}
+            <div className="lg:col-span-5 relative">
+              <div className="relative mx-auto max-w-md">
+                <div className="absolute -inset-4 bg-gradient-to-tr from-[var(--foundation-primary-light)] to-[var(--foundation-accent-light)] rounded-3xl blur-xl opacity-70" />
+                <div className="relative w-full h-[420px] sm:h-[480px] rounded-3xl overflow-hidden shadow-2xl ring-1 ring-purple-100">
+                  <Image
+                    src="/images/disabledchildandman.avif"
+                    alt="Founder and Inspiration of JOVIA Foundation"
+                    fill
+                    className="object-cover object-center"
+                    priority
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                  <div className="absolute bottom-6 left-6 right-6 p-5 bg-white/95 backdrop-blur-md rounded-2xl shadow-xl border border-purple-100">
+                    <p className="text-xs font-bold text-[var(--foundation-primary)] uppercase tracking-wider">
+                      Leadership & Vision
+                    </p>
+                    <h3 className="text-lg font-extrabold text-[var(--foreground)] mt-0.5">
+                      Founder & Board of Directors
+                    </h3>
+                    <p className="text-xs font-semibold text-[var(--foreground-muted)]">
+                      JOVIA Foundation (Canada & Cameroon)
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Founder Word & Letter (7 cols) */}
+            <div className="lg:col-span-7 space-y-6">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[var(--foundation-primary-light)] text-[var(--foundation-primary)] text-xs font-extrabold uppercase tracking-wider">
+                <Quotes weight="fill" className="w-4 h-4 text-[var(--foundation-accent)]" />
+                A Word from the Founder
+              </div>
+
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[var(--foreground)]">
+                Why We Created <br />
+                <span className="text-gradient-primary">JOVIA Foundation</span>
+              </h2>
+
+              <blockquote className="p-6 rounded-2xl bg-purple-50/70 border-l-4 border-[var(--foundation-primary)] italic text-base sm:text-lg font-semibold text-[var(--foreground)] leading-relaxed">
+                "When we look into the eyes of a child with a disability, we do not see limitations—we see untapped potential, immense strength, and a spirit waiting for an opportunity. JOVIA Foundation was born from love, purpose, and the unwavering belief in human ability."
+              </blockquote>
+
+              <div className="space-y-4 text-base text-[var(--foreground-muted)] leading-relaxed">
+                <p>
+                  Having walked alongside families caring for children with special needs and witnessed firsthand the severe gaps in healthcare, adaptive learning, and social support, we knew that passive empathy was not enough.
+                </p>
+                <p>
+                  Across both Canada and Cameroon, thousands of children with disabilities are kept out of school due to lack of accessible transport, unpaved terrains, or assistive mobility devices. Many mothers carry the heavy emotional and economic weight alone, fighting against systemic neglect and social stigma.
+                </p>
+                <p>
+                  JOVIA Foundation exists to bridge this divide. We are dedicated to ensuring that every child is granted the assistive technology, physical therapy, inclusive schooling, and family respite care they need to live with independence and pride.
+                </p>
+              </div>
+
+              <div className="pt-4 border-t border-purple-100 flex items-center justify-between">
+                <div>
+                  <p className="text-base font-extrabold text-[var(--foreground)]">
+                    Founder & Leadership Council
+                  </p>
+                  <p className="text-xs font-medium text-[var(--foreground-muted)]">
+                    Joseph's Opportunities, Values, Inclusion & Ability (JOVIA)
+                  </p>
+                </div>
+                <Button href="/contact" variant="primary" size="default" className="font-bold shadow-md">
+                  Connect with Us
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 2. Founding Inspiration & Story */}
+      <section id="story" className="py-20 bg-[var(--background-alt)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             <div className="lg:col-span-6 relative">
@@ -84,7 +163,7 @@ export default function AboutPage() {
 
             <div className="lg:col-span-6 space-y-6">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-100 text-[var(--foundation-primary)] text-xs font-extrabold uppercase tracking-wider">
-                Part A — Founding Inspiration
+                Part A Founding Inspiration
               </div>
               <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[var(--foreground)]">
                 The Inspiration Behind <span className="text-gradient-primary">JOVIA</span>
@@ -194,7 +273,7 @@ export default function AboutPage() {
 
             <div className="relative h-64 sm:h-72 rounded-3xl overflow-hidden shadow-lg border border-purple-100 group">
               <Image
-                src="/images/wheelchairperson.jpg"
+                src="/images/younggirlwheelchair.avif"
                 alt="Mobility and Inclusion in Action"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -288,7 +367,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
             <Badge variant="accent" className="font-bold">
-              Part B — Charitable Objects
+              Part B Charitable Objects
             </Badge>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">
               Our 5 Core Program Mandates
@@ -382,14 +461,14 @@ export default function AboutPage() {
               <div className="lg:col-span-5 relative">
                 <div className="relative w-full h-56 sm:h-64 rounded-2xl overflow-hidden shadow-xl ring-4 ring-white">
                   <Image
-                    src="/images/consulting-team.jpg"
-                    alt="International Consulting & Project Planning Team"
+                    src="/images/teachersdisabledchildern.webp"
+                    alt="Inclusive Education and Rehabilitation Hub Team"
                     fill
                     className="object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-4">
                     <span className="text-xs font-bold text-white">
-                      Field Consultants & Rehabilitation Planners
+                      Inclusive Education & Rehabilitation Staff
                     </span>
                   </div>
                 </div>

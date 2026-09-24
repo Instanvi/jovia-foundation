@@ -125,15 +125,13 @@ export default function Footer() {
           {/* Column 1: Brand & Identity (4 cols) */}
           <div className="lg:col-span-4 space-y-6">
             <Link href="/" className="flex items-center gap-3 group">
-              <div className="w-12 h-12 rounded-2xl bg-white p-1 flex items-center justify-center shadow-md">
-                <Image
-                  src="/jovialogo.svg"
-                  alt="JOVIA Foundation Logo"
-                  width={46}
-                  height={46}
-                  className="object-contain"
-                />
-              </div>
+              <Image
+                src="/jovialogo.svg"
+                alt="JOVIA Foundation Logo"
+                width={48}
+                height={48}
+                className="h-10 sm:h-12 w-auto object-contain"
+              />
               <div className="flex flex-col">
                 <span className="text-2xl font-extrabold tracking-tight text-white group-hover:text-purple-300 transition-colors">
                   JOVIA <span className="text-[var(--foundation-accent)]">FOUNDATION</span>

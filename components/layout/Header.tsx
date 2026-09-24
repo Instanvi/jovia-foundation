@@ -128,16 +128,14 @@ export default function Header() {
           <div className="flex items-center justify-between">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3 group">
-              <div className="relative w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center bg-white rounded-2xl shadow-sm border border-purple-100 p-1 group-hover:scale-105 transition-transform duration-300">
-                <Image
-                  src="/jovialogo.svg"
-                  alt="JOVIA Foundation Logo"
-                  width={50}
-                  height={50}
-                  priority
-                  className="object-contain"
-                />
-              </div>
+              <Image
+                src="/jovialogo.svg"
+                alt="JOVIA Foundation Logo"
+                width={48}
+                height={48}
+                priority
+                className="h-10 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+              />
               <div className="flex flex-col">
                 <span className="text-xl sm:text-2xl font-extrabold tracking-tight text-[var(--foundation-primary)] group-hover:text-[var(--foundation-primary-hover)] transition-colors">
                   JOVIA <span className="text-[var(--foundation-accent)]">FOUNDATION</span>

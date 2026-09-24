@@ -52,10 +52,10 @@ Our color palette is inspired by humanitarian and foundation work - warm, access
 ## 🔤 Typography
 
 ### Font Family
-**Inter** - A professional, highly readable sans-serif font perfect for humanitarian work.
+**Manrope-Variable** - A modern, high-clarity variable geometric sans-serif font tailored for humanitarian and community impact.
 
 ```typescript
-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 
+font-family: 'Manrope-Variable', 'Manrope', -apple-system, BlinkMacSystemFont, 
              "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 ```
 
