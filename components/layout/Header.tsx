@@ -1,9 +1,10 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
+import { usePathname } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import { usePathname } from "next/navigation";
 import {
   Heart,
   Phone,
@@ -19,11 +20,14 @@ import {
   InstagramLogo,
 } from "@phosphor-icons/react/dist/ssr";
 import { Button } from "@/components/ui/Button";
+import LanguageSwitcher from "@/components/layout/LanguageSwitcher";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
+  const t = useTranslations("header");
+  const tCommon = useTranslations("common");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,9 +40,9 @@ export default function Header() {
 
   // Center navigation links: Home, About, Resources
   const navLinks = [
-    { href: "/", label: "Home" },
-    { href: "/about", label: "About" },
-    { href: "/resources", label: "Resources" },
+    { href: "/", label: t("nav.home") },
+    { href: "/about", label: t("nav.about") },
+    { href: "/resources", label: t("nav.resources") },
   ];
 
   return (
@@ -49,30 +53,30 @@ export default function Header() {
           <div className="flex items-center space-x-6">
             <span className="inline-flex items-center text-purple-200 font-medium">
               <span className="w-2 h-2 rounded-full bg-[var(--foundation-accent)] animate-pulse mr-2" />
-              Global Mission • Every Child Deserves a Chance to Thrive
+              {t("topBar.globalMission")} • {t("topBar.slogan")}
             </span>
             <span className="text-white/20">|</span>
             <a
-              href="mailto:info@joviafoundation.org"
+              href={`mailto:${t("topBar.email")}`}
               className="flex items-center gap-1.5 hover:text-white transition-colors"
             >
               <Envelope weight="bold" className="w-3.5 h-3.5 text-[var(--foundation-accent)]" />
-              info@joviafoundation.org
+              {t("topBar.email")}
             </a>
             <a
-              href="tel:+18001234567"
+              href={`tel:${t("topBar.phone")}`}
               className="flex items-center gap-1.5 hover:text-white transition-colors"
             >
-              <Phone weight="bold" className="w-3.5 h-3.5 text-[var(--foundation-accent)]" />
-              +1 (800) 123-4567
             </a>
           </div>
 
           <div className="flex items-center space-x-4">
             <span className="flex items-center gap-1.5 text-purple-200">
               <ShieldCheck weight="fill" className="w-4 h-4 text-amber-400" />
-              Registered Non-Profit Foundation
+              {t("topBar.registeredNonProfit")}
             </span>
+            <span className="text-white/20">|</span>
+            <LanguageSwitcher />
             <span className="text-white/20">|</span>
             <div className="flex items-center space-x-2">
               <a
@@ -130,7 +134,7 @@ export default function Header() {
             <Link href="/" className="flex items-center gap-3 group">
               <Image
                 src="/jovialogo.svg"
-                alt="JOVIA Foundation Logo"
+                alt={`${tCommon("siteName")} Logo`}
                 width={48}
                 height={48}
                 priority
@@ -141,7 +145,7 @@ export default function Header() {
                   JOVIA <span className="text-[var(--foundation-accent)]">FOUNDATION</span>
                 </span>
                 <span className="text-[10px] sm:text-[11px] font-bold tracking-wider text-[var(--foreground-muted)] uppercase hidden sm:block">
-                  Joseph's Opportunities, Values, Inclusion & Ability
+                  {tCommon("tagline")}
                 </span>
               </div>
             </Link>
@@ -173,7 +177,7 @@ export default function Header() {
                 variant="outline"
                 size="default"
               >
-                Contact Us
+                {t("actions.contactUs")}
               </Button>
 
               <Button
@@ -183,7 +187,7 @@ export default function Header() {
                 className="gap-2 font-bold px-6 shadow-md hover:shadow-primary-glow"
               >
                 <Heart weight="fill" className="w-4 h-4 fill-white animate-heart-beat" />
-                Donate Now
+                {t("actions.donateNow")}
               </Button>
             </div>
 
@@ -196,7 +200,7 @@ export default function Header() {
                 className="font-bold px-3 py-1.5 text-xs"
               >
                 <Heart weight="fill" className="w-3.5 h-3.5 fill-white" />
-                Donate
+                {t("actions.donate")}
               </Button>
 
               <button
@@ -221,10 +225,10 @@ export default function Header() {
           <div className="px-5 pt-4 pb-6 space-y-2">
             <div className="p-3 bg-[var(--foundation-primary-light)] rounded-2xl mb-3 flex items-center justify-between">
               <div className="text-xs font-semibold text-[var(--foundation-primary)]">
-                Global Programs & Regional Hubs
+                {t("mobileMenu.globalPrograms")}
               </div>
               <span className="text-[11px] font-bold text-[var(--foundation-accent)]">
-                Registered NGO
+                {t("mobileMenu.registeredNGO")}
               </span>
             </div>
 
@@ -248,7 +252,7 @@ export default function Header() {
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="w-full justify-center font-bold"
               >
-                Contact Us
+                {t("actions.contactUs")}
               </Button>
 
               <Button
@@ -259,23 +263,23 @@ export default function Header() {
                 className="w-full justify-center font-bold"
               >
                 <Heart weight="fill" className="w-4 h-4 fill-white" />
-                Donate Now
+                {t("actions.donateNow")}
               </Button>
 
               <div className="flex flex-col gap-2 pt-2 text-xs text-[var(--foreground-muted)]">
                 <a
-                  href="mailto:info@joviafoundation.org"
+                  href={`mailto:${t("topBar.email")}`}
                   className="flex items-center gap-2 p-2 rounded-lg bg-[var(--surface)]"
                 >
                   <Envelope weight="bold" className="w-4 h-4 text-[var(--foundation-primary)]" />
-                  info@joviafoundation.org
+                  {t("topBar.email")}
                 </a>
                 <a
-                  href="tel:+18001234567"
+                  href={`tel:${t("topBar.phone")}`}
                   className="flex items-center gap-2 p-2 rounded-lg bg-[var(--surface)]"
                 >
                   <Phone weight="bold" className="w-4 h-4 text-[var(--foundation-accent)]" />
-                  +1 (800) 123-4567
+                  {t("topBar.phone")}
                 </a>
               </div>
             </div>

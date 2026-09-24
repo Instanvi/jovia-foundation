@@ -1,6 +1,262 @@
 {
   "common": {
     "siteName": "JOVIA Foundation",
-    "tagline": "Joseph's Opportunities, Values, Inclusion & Ability"
+    "tagline": "Joseph's Opportunities, Values, Inclusion & Ability",
+    "sloganMain": "Every Child. Every Ability. Every Opportunity.",
+    "sloganSecondary": "Every Child Deserves a Chance to Thrive."
+  },
+  "header": {
+    "topBar": {
+      "globalMission": "Global Mission",
+      "slogan": "Every Child Deserves a Chance to Thrive",
+      "email": "info@joviafoundation.org",
+      "phone": "+1 (800) 123-4567",
+      "registeredNonProfit": "Registered Non-Profit Foundation"
+    },
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "resources": "Resources"
+    },
+    "actions": {
+      "contactUs": "Contact Us",
+      "donateNow": "Donate Now",
+      "donate": "Donate"
+    },
+    "mobileMenu": {
+      "globalPrograms": "Global Programs & Regional Hubs",
+      "registeredNGO": "Registered NGO"
+    }
+  },
+  "home": {
+    "hero": {
+      "badge": "Dedicated to Every Child in Canada, Cameroon & Worldwide",
+      "titlePart1": "Building Hope.",
+      "titlePart2": "Creating ",
+      "titlePart2Accent": "Change.",
+      "titlePart3": "Transforming Lives.",
+      "slogan": "Every Child. Every Ability. Every Opportunity.",
+      "description": "Together, we build an inclusive world where every child and youth with disabilities has the opportunity to live, learn, and thrive globally through education, healthcare, assistive supports, and family empowerment.",
+      "donateBtn": "Donate Now",
+      "exploreBtn": "Explore Our Work",
+      "supportersHighlight": "Dedicated to Every Child",
+      "supportersText": "in Canada, Cameroon & Worldwide",
+      "imageTags": {
+        "mobility": "Mobility Freedom",
+        "pediatric": "Pediatric Care",
+        "education": "Inclusive Education",
+        "family": "Family Respite"
+      },
+      "imageAlts": {
+        "wheelchair": "Pediatric Wheelchair Freedom",
+        "pediatricCare": "Pediatric Healthcare and Care",
+        "adaptiveEducation": "Adaptive Education and Literacy",
+        "caregiver": "Caregiver and Family Support",
+        "supporter": "Supporter {number}"
+      }
+    },
+    "pillars": {
+      "transparent": {
+        "title": "Transparent",
+        "description": "100% financial and operational transparency in how donations and field supplies are allocated."
+      },
+      "accountable": {
+        "title": "Accountable",
+        "description": "We answer directly to our children, families, members, donors, and governing boards."
+      },
+      "community": {
+        "title": "Community Driven",
+        "description": "Culturally rooted, grassroots solutions tailored to the needs of local communities in Canada, Cameroon & Worldwide."
+      },
+      "impact": {
+        "title": "Proven Impact",
+        "description": "Measurable, life-changing outcomes in education, rehabilitation, and family resilience."
+      }
+    },
+    "aboutSpotlight": {
+      "badge": "About Jovia Foundation",
+      "titlePart1": "Empowering Communities.",
+      "titlePart2": "Inspiring Inclusion.",
+      "description": "JOVIA Foundation is a registered humanitarian non-profit organization dedicated to improving the lives, health, dignity, and opportunities of children and youth with disabilities and their families across communities in Canada, Cameroon, and worldwide.",
+      "points": {
+        "point1": "Inclusive education and adaptive learning tools for every child",
+        "point2": "Assistive devices, mobility carts & pediatric physical therapy",
+        "point3": "Caregiver support, family respite & economic livelihood grants",
+        "point4": "Disability rights advocacy, anti-stigma campaigns & inclusion"
+      },
+      "cardBadge": "Grassroots Mission",
+      "cardText": "Reaching underserved children with assistive equipment & adaptive schooling",
+      "imageAlt": "African Child with Disability Supported by JOVIA",
+      "learnMoreBtn": "Learn More About Us",
+      "contactBtn": "Contact Our Team"
+    },
+    "programPillars": {
+      "badge": "Our 5 Core Program Pillars",
+      "titlePart1": "Programs That Create ",
+      "titlePart2": "Lasting Change",
+      "description": "Delivering holistic, human rights-centered programs directly addressing the systemic barriers faced by children with disabilities across communities in Canada, Cameroon, and worldwide.",
+      "learnMore": "Learn More",
+      "items": {
+        "education": {
+          "title": "Child Development & Education",
+          "description": "Adaptive education, accessible classrooms, communication tools, literacy supports, and scholarships."
+        },
+        "health": {
+          "title": "Health & Mobility Supports",
+          "description": "Wheelchairs, all-terrain mobility carts, pediatric physiotherapy, and specialized healthcare access."
+        },
+        "family": {
+          "title": "Family Support & Empowerment",
+          "description": "Caregiver peer support, respite programs, navigation resources, and livelihood micro-grants for mothers."
+        },
+        "inclusion": {
+          "title": "Inclusion & Community Participation",
+          "description": "Inclusive recreation, social integration, accessibility education, and breaking disability stigma."
+        },
+        "povertyRelief": {
+          "title": "Poverty Relief & Cameroon Centre",
+          "description": "Necessities of life assistance and the establishment of a dedicated rehabilitation & learning hub in Cameroon."
+        }
+      }
+    },
+    "fieldInitiatives": {
+      "badge": "Strategic Impact Initiatives",
+      "titlePart1": "Our Core ",
+      "titlePart2": "Field Programs",
+      "description": "Measurable, sustainable solutions designed to break isolation, open classroom doors, and build long-term independence for children with disabilities.",
+      "item1": {
+        "badge": "Education & Literacy",
+        "title": "Accessible Classrooms & Adaptive Learning",
+        "description": "Constructing accessible ramps, providing adaptive desks, speech devices, and teacher training to ensure children with disabilities thrive in mainstream schools.",
+        "point1": "Wheelchair-accessible ramps & wide doors",
+        "point2": "Tactile & large-print learning kits",
+        "point3": "Educator inclusive-teaching workshops",
+        "btn": "Support Education",
+        "imageAlt": "Inclusive Education & Adaptive Classrooms"
+      },
+      "item2": {
+        "badge": "Health & Mobility",
+        "title": "All-Terrain Mobility Carts & Therapy",
+        "description": "Distributing rugged mobility carts, customized pediatric wheelchairs, and delivering qualified pediatric physiotherapy in rural and urban communities.",
+        "point1": "Rugged hand-powered carts for unpaved terrain",
+        "point2": "Pediatric physical therapy sessions",
+        "point3": "Custom postural seating & orthotics",
+        "btn": "Support Mobility",
+        "imageAlt": "Pediatric Wheelchairs & Mobility Supports"
+      },
+      "item3": {
+        "badge": "Family Respite & Livelihoods",
+        "title": "Caregiver Respite & Micro-Grants",
+        "description": "Supporting mothers and caregivers through peer respite groups, nutritional assistance, and livelihood micro-grants to ensure whole-family resilience.",
+        "point1": "Caregiver peer support & respite circles",
+        "point2": "Small business seed grants for mothers",
+        "point3": "Household nutritional and food security packs",
+        "btn": "Support Caregivers",
+        "imageAlt": "Caregiver Mother and Child Support"
+      }
+    },
+    "fieldGallery": {
+      "badge": "Real Community Moments",
+      "titlePart1": "Witnessing Real Change ",
+      "titlePart2": "Across Canada & Cameroon",
+      "description": "Every photograph reflects genuine field work: adaptive classrooms, wheelchair mobility freedom, caregiver support, and pediatric healthcare.",
+      "viewFullBtn": "View Full Media Gallery (11 Stories)",
+      "exploreStory": "Explore Story",
+      "story1": {
+        "badge": "Grassroots Outreach",
+        "location": "Littoral Region, Cameroon",
+        "title": "Rural Disability Direct Aid",
+        "description": "Delivering vital supplies, assistive devices, and barrier-breaking support to remote villages.",
+        "imageAlt": "Rural Community Outreach"
+      },
+      "story2": {
+        "badge": "Caregiver Circles",
+        "location": "Douala, Cameroon",
+        "title": "Mother Empowerment Respite",
+        "description": "Livelihood counseling and peer mental wellness groups for dedicated caregiver mothers.",
+        "imageAlt": "Caregiver Mother Respite"
+      },
+      "story3": {
+        "badge": "Mobility Tech",
+        "location": "Littoral & Centre Regions, Cameroon",
+        "title": "All-Terrain Cart Logistics",
+        "description": "Rugged carts engineered specifically for rough unpaved roads, giving children daily school access.",
+        "imageAlt": "Early Mobility & Rehabilitation"
+      },
+      "story4": {
+        "badge": "Inclusive Schools",
+        "location": "Douala Centre, Littoral Region, Cameroon",
+        "title": "Teacher Adaptive Training",
+        "description": "Equipping mainstream educators with skills to welcome and teach children of all abilities.",
+        "imageAlt": "Educator Inclusive Training"
+      }
+    },
+    "volunteerBanner": {
+      "badge": "Join Our Foundation",
+      "titlePart1": "Be the Change.",
+      "titlePart2": "Volunteer or Become a Member!",
+      "description": "Join our dedicated volunteer network or apply for community membership to help shape inclusive programs for children across communities in Canada, Cameroon, and worldwide.",
+      "membershipBtn": "Apply for Community Membership",
+      "volunteerBtn": "Join as Community Volunteer",
+      "imageAlt": "Volunteers, families and children"
+    }
+  },
+  "footer": {
+    "newsletter": {
+      "badge": "Stay Connected With Our Journey",
+      "heading": "Join Our Circle of Hope & Inclusion",
+      "description": "Subscribe to receive quarterly impact updates, inspiring field stories, and governance reports from our global mission in Canada, Cameroon, and worldwide.",
+      "placeholder": "Enter your email address",
+      "subscribe": "Subscribe",
+      "thankYou": "Thank you for subscribing!",
+      "confirmMessage": "You will receive our latest reports and community news directly."
+    },
+    "brand": {
+      "slogan": "Every Child. Every Ability. Every Opportunity.",
+      "description": "Dedicated to improving opportunities, dignity, and quality of life for children and youth with disabilities and their families globally through inclusive education, healthcare, mobility equipment, and community empowerment.",
+      "followWork": "Follow Our Work"
+    },
+    "sections": {
+      "navigation": "Navigation",
+      "governance": "Governance & Policies",
+      "programs": "Core Programs",
+      "regionalOffices": "Regional Offices"
+    },
+    "links": {
+      "home": "Home",
+      "about": "About Us",
+      "resources": "Media & Field Gallery",
+      "contact": "Contact & Offices",
+      "codeOfConduct": "Code of Conduct & Ethics",
+      "childSafeguarding": "Child Safeguarding Policy",
+      "bylaws": "Official Bylaws & Framework",
+      "brandKit": "Official Brand Kit & Reports",
+      "membership": "Community Membership & Volunteering",
+      "childDevelopment": "Child Development & Education",
+      "healthMobility": "Health, Mobility & Assistive Supports",
+      "familySupport": "Family Support & Empowerment",
+      "inclusion": "Inclusion & Community Participation",
+      "povertyRelief": "Poverty Relief & Cameroon Centre"
+    },
+    "offices": {
+      "canadaTitle": "Canada Governance Office",
+      "canadaLocation": "Alberta / Ontario, Canada • Reg. Society Under Alberta Societies Act",
+      "cameroonTitle": "Cameroon Regional Hub",
+      "cameroonLocation": "Boulevard de la Liberté, Akwa, Douala / Yaoundé, Cameroon"
+    },
+    "bottom": {
+      "copyright": "© {year} JOVIA Foundation. All rights reserved.",
+      "slogan": "Every Child Deserves a Chance to Thrive.",
+      "privacyPolicy": "Privacy Policy",
+      "termsOfUse": "Terms of Use",
+      "codeOfConduct": "Code of Conduct",
+      "contactUs": "Contact Us",
+      "donate": "Donate"
+    }
+  },
+  "language": {
+    "english": "English",
+    "french": "Français",
+    "switchTo": "Switch to {language}"
   }
 }

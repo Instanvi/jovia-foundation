@@ -1,6 +1,262 @@
 {
   "common": {
     "siteName": "Fondation JOVIA",
-    "tagline": "Joseph's Opportunities, Values, Inclusion & Ability"
+    "tagline": "Joseph's Opportunities, Values, Inclusion & Ability",
+    "sloganMain": "Chaque Enfant. Chaque Capacité. Chaque Opportunité.",
+    "sloganSecondary": "Chaque Enfant Mérite une Chance de S'épanouir."
+  },
+  "header": {
+    "topBar": {
+      "globalMission": "Mission Mondiale",
+      "slogan": "Chaque Enfant Mérite une Chance de S'épanouir",
+      "email": "info@joviafoundation.org",
+      "phone": "+1 (800) 123-4567",
+      "registeredNonProfit": "Fondation à But Non Lucratif Enregistrée"
+    },
+    "nav": {
+      "home": "Accueil",
+      "about": "À Propos",
+      "resources": "Ressources"
+    },
+    "actions": {
+      "contactUs": "Contactez-Nous",
+      "donateNow": "Faire un Don",
+      "donate": "Donner"
+    },
+    "mobileMenu": {
+      "globalPrograms": "Programmes Mondiaux et Bureaux Régionaux",
+      "registeredNGO": "ONG Enregistrée"
+    }
+  },
+  "home": {
+    "hero": {
+      "badge": "Dédié à Chaque Enfant au Canada, au Cameroun et dans le Monde",
+      "titlePart1": "Bâtir l'Espoir.",
+      "titlePart2": "Créer le ",
+      "titlePart2Accent": "Changement.",
+      "titlePart3": "Transformer des Vies.",
+      "slogan": "Chaque Enfant. Chaque Capacité. Chaque Opportunité.",
+      "description": "Ensemble, nous construisons un monde inclusif où chaque enfant et jeune en situation de handicap a l'opportunité de vivre, d'apprendre et de s'épanouir à l'échelle mondiale grâce à l'éducation, aux soins de santé, aux soutiens fonctionnels et à l'autonomisation des familles.",
+      "donateBtn": "Faire un Don",
+      "exploreBtn": "Découvrir Notre Mission",
+      "supportersHighlight": "Dédié à Chaque Enfant",
+      "supportersText": "au Canada, au Cameroun et dans le Monde",
+      "imageTags": {
+        "mobility": "Liberté de Mouvement",
+        "pediatric": "Soins Pédiatriques",
+        "education": "Éducation Inclusive",
+        "family": "Répit Familial"
+      },
+      "imageAlts": {
+        "wheelchair": "Fauteuil roulant pédiatrique pour l'autonomie",
+        "pediatricCare": "Soins de santé pédiatriques et accompagnement",
+        "adaptiveEducation": "Éducation adaptée et alphabétisation",
+        "caregiver": "Soutien aux aidants et aux familles",
+        "supporter": "Partenaire {number}"
+      }
+    },
+    "pillars": {
+      "transparent": {
+        "title": "Transparent",
+        "description": "Transparence financière et opérationnelle totale dans l'attribution des dons et du matériel sur le terrain."
+      },
+      "accountable": {
+        "title": "Responsable",
+        "description": "Nous rendons compte directement à nos enfants, familles, membres, donateurs et conseils d'administration."
+      },
+      "community": {
+        "title": "Axé sur la Communauté",
+        "description": "Des solutions enracinées localement et adaptées aux besoins réels des communautés au Canada, au Cameroun et dans le monde."
+      },
+      "impact": {
+        "title": "Impact Éprouvé",
+        "description": "Des résultats tangibles et transformateurs en éducation, réadaptation et résilience familiale."
+      }
+    },
+    "aboutSpotlight": {
+      "badge": "À Propos de la Fondation Jovia",
+      "titlePart1": "Autonomiser les Communautés.",
+      "titlePart2": "Inspirer l'Inclusion.",
+      "description": "La Fondation JOVIA est une organisation humanitaire à but non lucratif enregistrée, dédiée à améliorer la vie, la santé, la dignité et les opportunités des enfants et des jeunes en situation de handicap ainsi que de leurs familles dans les communautés au Canada, au Cameroun et dans le monde entier.",
+      "points": {
+        "point1": "Éducation inclusive et outils d'apprentissage adaptés pour chaque enfant",
+        "point2": "Dispositifs d'assistance, chariots de mobilité et kinésithérapie pédiatrique",
+        "point3": "Soutien aux aidants, répit familial et micro-subventions d'autonomie financière",
+        "point4": "Plaidoyer pour les droits des personnes handicapées, lutte contre la stigmatisation et inclusion"
+      },
+      "cardBadge": "Mission de Terrain",
+      "cardText": "Aider les enfants vulnérables avec du matériel adapté et une scolarisation inclusive",
+      "imageAlt": "Enfant africain en situation de handicap soutenu par JOVIA",
+      "learnMoreBtn": "En Savoir Plus Sur Nous",
+      "contactBtn": "Contacter Notre Équipe"
+    },
+    "programPillars": {
+      "badge": "Nos 5 Piliers de Programmes",
+      "titlePart1": "Des Programmes Qui Créent un ",
+      "titlePart2": "Changement Durable",
+      "description": "Offrir des programmes holistiques et axés sur les droits humains, répondant directement aux obstacles systémiques rencontrés par les enfants en situation de handicap au Canada, au Cameroun et partout dans le monde.",
+      "learnMore": "En Savoir Plus",
+      "items": {
+        "education": {
+          "title": "Développement et Éducation de l'Enfant",
+          "description": "Éducation adaptée, salles de classe accessibles, outils de communication, soutien à l'alphabétisation et bourses d'études."
+        },
+        "health": {
+          "title": "Santé et Soutiens à la Mobilité",
+          "description": "Fauteuils roulants, chariots tout-terrain, physiothérapie pédiatrique et accès aux soins de santé spécialisés."
+        },
+        "family": {
+          "title": "Soutien et Autonomisation Familiale",
+          "description": "Groupes de pairs aidants, programmes de répit, orientation aux ressources et micro-subventions pour les mères."
+        },
+        "inclusion": {
+          "title": "Inclusion et Participation Communautaire",
+          "description": "Loisirs inclusifs, intégration sociale, sensibilisation à l'accessibilité et élimination des préjugés liés au handicap."
+        },
+        "povertyRelief": {
+          "title": "Lutte Contre la Pauvreté et Centre au Cameroun",
+          "description": "Assistance aux besoins essentiels de la vie et création d'un centre dédié d'apprentissage et de réadaptation au Cameroun."
+        }
+      }
+    },
+    "fieldInitiatives": {
+      "badge": "Initiatives d'Impact Stratégique",
+      "titlePart1": "Nos Programmes de ",
+      "titlePart2": "Terrain Majeurs",
+      "description": "Des solutions mesurables et durables conçues pour briser l'isolement, ouvrir les portes des salles de classe et bâtir une autonomie durable pour les enfants en situation de handicap.",
+      "item1": {
+        "badge": "Éducation et Alphabétisation",
+        "title": "Salles de Classe Accessibles et Apprentissage Adapté",
+        "description": "Construction de rampes d'accès, aménagement de bureaux adaptés, outils d'élocution et formation des enseignants pour accueillir tous les enfants.",
+        "point1": "Rampes d'accès pour fauteuils roulants et portes élargies",
+        "point2": "Kits d'apprentissage tactiles et en gros caractères",
+        "point3": "Ateliers pédagogiques sur l'enseignement inclusif",
+        "btn": "Soutenir l'Éducation",
+        "imageAlt": "Éducation inclusive et salles de classe adaptées"
+      },
+      "item2": {
+        "badge": "Santé et Mobilité",
+        "title": "Chariots Tout-Terrain et Thérapie",
+        "description": "Distribution de chariots de mobilité robustes, fauteuils pédiatriques sur mesure et séances de kinésithérapie dans les zones rurales et urbaines.",
+        "point1": "Chariots manuels robustes pour pistes non goudronnées",
+        "point2": "Séances de physiothérapie pédiatrique personnalisées",
+        "point3": "Sièges posturaux sur mesure et orthèses adaptées",
+        "btn": "Soutenir la Mobilité",
+        "imageAlt": "Fauteuils roulants pédiatriques et soutien à la mobilité"
+      },
+      "item3": {
+        "badge": "Répit Familial et Moyens de Subsistance",
+        "title": "Répit des Aidants et Micro-Subventions",
+        "description": "Accompagnement des mères et des proches aidants par des cercles de répit, une aide nutritionnelle et des micro-financements d'activités génératrices de revenus.",
+        "point1": "Cercles de soutien entre pairs et répit pour aidants",
+        "point2": "Micro-subventions de démarrage d'activité pour les mères",
+        "point3": "Paniers de sécurité alimentaire et nutritionnelle des ménages",
+        "btn": "Soutenir les Aidants",
+        "imageAlt": "Soutien aux mères aidantes et aux enfants"
+      }
+    },
+    "fieldGallery": {
+      "badge": "Moments Réels sur le Terrain",
+      "titlePart1": "Témoins du Vrai Changement ",
+      "titlePart2": "Au Canada et au Cameroun",
+      "description": "Chaque photo témoigne d'un travail concret sur le terrain : classes inclusives, mobilité en fauteuil roulant, soutien aux aidants et soins pédiatriques.",
+      "viewFullBtn": "Voir Toute la Galerie Médias (11 Récits)",
+      "exploreStory": "Découvrir l'Histoire",
+      "story1": {
+        "badge": "Action de Proximité",
+        "location": "Région du Littoral, Cameroun",
+        "title": "Aide Directe Handicap en Milieu Rural",
+        "description": "Livraison de fournitures vitales, d'équipements adaptés et d'un accompagnement personnalisé dans les villages isolés.",
+        "imageAlt": "Action de proximité en milieu rural"
+      },
+      "story2": {
+        "badge": "Cercles d'Aidants",
+        "location": "Douala, Cameroun",
+        "title": "Répit et Autonomisation des Mères",
+        "description": "Conseil en activités économiques et groupes de bien-être mental pour les mères dévouées.",
+        "imageAlt": "Répit pour mère aidante"
+      },
+      "story3": {
+        "badge": "Technologies de Mobilité",
+        "location": "Régions du Littoral et du Centre, Cameroun",
+        "title": "Logistique des Chariots Tout-Terrain",
+        "description": "Chariots robustes conçus spécialement pour les pistes non bitumées, garantissant l'accès quotidien à l'école.",
+        "imageAlt": "Mobilité précoce et réadaptation"
+      },
+      "story4": {
+        "badge": "Écoles Inclusives",
+        "location": "Centre de Douala, Région du Littoral, Cameroun",
+        "title": "Formation Pédagogique Adaptée",
+        "description": "Former les enseignants des écoles ordinaires pour accueillir et instruire les enfants de toutes aptitudes.",
+        "imageAlt": "Formation inclusive des enseignants"
+      }
+    },
+    "volunteerBanner": {
+      "badge": "Rejoignez Notre Fondation",
+      "titlePart1": "Soyez le Changement.",
+      "titlePart2": "Devenez Bénévole ou Membre !",
+      "description": "Rejoignez notre réseau de bénévoles dévoués ou devenez membre de la communauté pour façonner des programmes inclusifs au Canada, au Cameroun et dans le monde entier.",
+      "membershipBtn": "Devenir Membre de la Communauté",
+      "volunteerBtn": "Rejoindre en Tant que Bénévole",
+      "imageAlt": "Bénévoles, familles et enfants réunis"
+    }
+  },
+  "footer": {
+    "newsletter": {
+      "badge": "Restez Connecté à Notre Voyage",
+      "heading": "Rejoignez Notre Cercle d'Espoir et d'Inclusion",
+      "description": "Abonnez-vous pour recevoir des mises à jour trimestrielles sur notre impact, des histoires inspirantes du terrain et des rapports de gouvernance de notre mission mondiale au Canada, au Cameroun et dans le monde entier.",
+      "placeholder": "Entrez votre adresse e-mail",
+      "subscribe": "S'abonner",
+      "thankYou": "Merci de vous être abonné !",
+      "confirmMessage": "Vous recevrez nos derniers rapports et nouvelles de la communauté directement."
+    },
+    "brand": {
+      "slogan": "Chaque Enfant. Chaque Capacité. Chaque Opportunité.",
+      "description": "Dédié à l'amélioration des opportunités, de la dignité et de la qualité de vie des enfants et des jeunes en situation de handicap et de leurs familles dans le monde entier grâce à l'éducation inclusive, aux soins de santé, aux équipements de mobilité et à l'autonomisation communautaire.",
+      "followWork": "Suivez Notre Travail"
+    },
+    "sections": {
+      "navigation": "Navigation",
+      "governance": "Gouvernance et Politiques",
+      "programs": "Programmes Principaux",
+      "regionalOffices": "Bureaux Régionaux"
+    },
+    "links": {
+      "home": "Accueil",
+      "about": "À Propos de Nous",
+      "resources": "Médias et Galerie de Terrain",
+      "contact": "Contact et Bureaux",
+      "codeOfConduct": "Code de Conduite et Éthique",
+      "childSafeguarding": "Politique de Protection de l'Enfant",
+      "bylaws": "Règlements Officiels et Cadre",
+      "brandKit": "Kit de Marque Officiel et Rapports",
+      "membership": "Adhésion Communautaire et Bénévolat",
+      "childDevelopment": "Développement et Éducation de l'Enfant",
+      "healthMobility": "Santé, Mobilité et Soutiens Assistifs",
+      "familySupport": "Soutien et Autonomisation de la Famille",
+      "inclusion": "Inclusion et Participation Communautaire",
+      "povertyRelief": "Lutte Contre la Pauvreté et Centre du Cameroun"
+    },
+    "offices": {
+      "canadaTitle": "Bureau de Gouvernance du Canada",
+      "canadaLocation": "Alberta / Ontario, Canada • Société Enregistrée Sous la Loi sur les Sociétés de l'Alberta",
+      "cameroonTitle": "Centre Régional du Cameroun",
+      "cameroonLocation": "Boulevard de la Liberté, Akwa, Douala / Yaoundé, Cameroun"
+    },
+    "bottom": {
+      "copyright": "© {year} Fondation JOVIA. Tous droits réservés.",
+      "slogan": "Chaque Enfant Mérite une Chance de S'épanouir.",
+      "privacyPolicy": "Politique de Confidentialité",
+      "termsOfUse": "Conditions d'Utilisation",
+      "codeOfConduct": "Code de Conduite",
+      "contactUs": "Contactez-Nous",
+      "donate": "Faire un Don"
+    }
+  },
+  "language": {
+    "english": "English",
+    "french": "Français",
+    "switchTo": "Passer à {language}"
   }
 }

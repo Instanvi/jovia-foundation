@@ -4,6 +4,7 @@ import * as React from "react";
 import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
+import { Link } from "@/i18n/navigation";
 
 const buttonVariants = cva(
   "inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-semibold transition-all duration-200 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none cursor-pointer hover:-translate-y-0.5 active:translate-y-0 active:scale-95 rounded-full",
@@ -63,7 +64,7 @@ function Button({
 
   if (href && !asChild) {
     return (
-      <a
+      <Link
         href={href}
         data-slot="button"
         data-variant={variant}
@@ -72,7 +73,7 @@ function Button({
         {...(props as any)}
       >
         {props.children}
-      </a>
+      </Link>
     );
   }
 

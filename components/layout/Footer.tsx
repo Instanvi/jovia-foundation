@@ -1,6 +1,7 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { useState } from "react";
 import {
@@ -26,6 +27,8 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
   const [newsletterEmail, setNewsletterEmail] = useState("");
   const [subscribed, setSubscribed] = useState(false);
+  const t = useTranslations("footer");
+  const tCommon = useTranslations("common");
 
   const handleSubscribe = (e: React.FormEvent) => {
     e.preventDefault();
@@ -37,24 +40,24 @@ export default function Footer() {
 
   const footerLinks = {
     pages: [
-      { href: "/", label: "Home" },
-      { href: "/about", label: "About Us" },
-      { href: "/resources", label: "Media & Field Gallery" },
-      { href: "/contact", label: "Contact & Offices" },
+      { href: "/", label: t("links.home") },
+      { href: "/about", label: t("links.about") },
+      { href: "/resources", label: t("links.resources") },
+      { href: "/contact", label: t("links.contact") },
     ],
     governance: [
-      { href: "/code-of-conduct", label: "Code of Conduct & Ethics" },
-      { href: "/code-of-conduct", label: "Child Safeguarding Policy" },
-      { href: "/bylaws", label: "Official Bylaws & Framework" },
-      { href: "/resources", label: "Official Brand Kit & Reports" },
-      { href: "/contact#membership", label: "Community Membership & Volunteering" },
+      { href: "/code-of-conduct", label: t("links.codeOfConduct") },
+      { href: "/code-of-conduct", label: t("links.childSafeguarding") },
+      { href: "/bylaws", label: t("links.bylaws") },
+      { href: "/resources", label: t("links.brandKit") },
+      { href: "/contact#membership", label: t("links.membership") },
     ],
     programs: [
-      { href: "/about#programs", label: "Child Development & Education" },
-      { href: "/about#programs", label: "Health, Mobility & Assistive Supports" },
-      { href: "/about#programs", label: "Family Support & Empowerment" },
-      { href: "/about#programs", label: "Inclusion & Community Participation" },
-      { href: "/about#programs", label: "Poverty Relief & Cameroon Centre" },
+      { href: "/about#programs", label: t("links.childDevelopment") },
+      { href: "/about#programs", label: t("links.healthMobility") },
+      { href: "/about#programs", label: t("links.familySupport") },
+      { href: "/about#programs", label: t("links.inclusion") },
+      { href: "/about#programs", label: t("links.povertyRelief") },
     ],
   };
 
@@ -71,14 +74,13 @@ export default function Footer() {
             <div className="lg:col-span-6 space-y-2">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-purple-200 text-xs font-semibold">
                 <Envelope weight="bold" className="w-3.5 h-3.5 text-[var(--foundation-accent)]" />
-                Stay Connected With Our Journey
+                {t("newsletter.badge")}
               </div>
               <h3 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white">
-                Join Our Circle of Hope & Inclusion
+                {t("newsletter.heading")}
               </h3>
               <p className="text-sm text-purple-100 max-w-lg">
-                Subscribe to receive quarterly impact updates, inspiring field stories, and
-                governance reports from our global mission in Canada, Cameroon, and worldwide.
+                {t("newsletter.description")}
               </p>
             </div>
 
@@ -87,9 +89,9 @@ export default function Footer() {
                 <div className="p-4 bg-purple-900/60 border border-purple-500/40 rounded-2xl flex items-center gap-3 text-purple-100">
                   <CheckCircle weight="fill" className="w-6 h-6 text-emerald-400 shrink-0" />
                   <div>
-                    <p className="font-bold text-sm">Thank you for subscribing!</p>
+                    <p className="font-bold text-sm">{t("newsletter.thankYou")}</p>
                     <p className="text-xs text-purple-200">
-                      You will receive our latest reports and community news directly.
+                      {t("newsletter.confirmMessage")}
                     </p>
                   </div>
                 </div>
@@ -98,7 +100,7 @@ export default function Footer() {
                   <Input
                     type="email"
                     required
-                    placeholder="Enter your email address"
+                    placeholder={t("newsletter.placeholder")}
                     value={newsletterEmail}
                     onChange={(e) => setNewsletterEmail(e.target.value)}
                     className="bg-white/10 border-white/20 text-white placeholder:text-gray-300 focus:bg-white/15 focus:border-[var(--foundation-accent)] rounded-full h-12 px-6"
@@ -109,7 +111,7 @@ export default function Footer() {
                     size="lg"
                     className="rounded-full shrink-0 font-bold shadow-md hover:shadow-accent-glow"
                   >
-                    Subscribe
+                    {t("newsletter.subscribe")}
                     <ArrowRight weight="bold" className="w-4 h-4 ml-1" />
                   </Button>
                 </form>
@@ -127,7 +129,7 @@ export default function Footer() {
             <Link href="/" className="flex items-center gap-3 group">
               <Image
                 src="/jovialogo.svg"
-                alt="JOVIA Foundation Logo"
+                alt={`${tCommon("siteName")} Logo`}
                 width={48}
                 height={48}
                 className="h-10 sm:h-12 w-auto object-contain"
@@ -137,26 +139,24 @@ export default function Footer() {
                   JOVIA <span className="text-[var(--foundation-accent)]">FOUNDATION</span>
                 </span>
                 <span className="text-[10px] uppercase font-bold tracking-wider text-purple-300">
-                  Joseph's Opportunities, Values, Inclusion & Ability
+                  {tCommon("tagline")}
                 </span>
               </div>
             </Link>
 
             <div className="space-y-2">
               <p className="text-sm font-bold text-amber-300">
-                "Every Child. Every Ability. Every Opportunity."
+                {t("brand.slogan")}
               </p>
               <p className="text-sm text-purple-100 leading-relaxed">
-                Dedicated to improving opportunities, dignity, and quality of life for children
-                and youth with disabilities and their families globally through
-                inclusive education, healthcare, mobility equipment, and community empowerment.
+                {t("brand.description")}
               </p>
             </div>
 
             {/* Social Media Links */}
             <div className="pt-1">
               <div className="text-xs font-bold uppercase tracking-wider text-amber-400 mb-3">
-                Follow Our Work
+                {t("brand.followWork")}
               </div>
               <div className="flex items-center space-x-3">
                 <a
@@ -202,7 +202,7 @@ export default function Footer() {
           {/* Column 2: 4 Pages (2 cols) */}
           <div className="lg:col-span-2 space-y-4">
             <h4 className="text-sm font-extrabold text-amber-400 uppercase tracking-wider">
-              Navigation
+              {t("sections.navigation")}
             </h4>
             <ul className="space-y-2.5">
               {footerLinks.pages.map((link) => (
@@ -221,7 +221,7 @@ export default function Footer() {
           {/* Column 3: Governance & Bylaws (3 cols) */}
           <div className="lg:col-span-3 space-y-4">
             <h4 className="text-sm font-extrabold text-amber-400 uppercase tracking-wider">
-              Governance & Policies
+              {t("sections.governance")}
             </h4>
             <ul className="space-y-2.5">
               {footerLinks.governance.map((link) => (
@@ -240,27 +240,27 @@ export default function Footer() {
           {/* Column 4: Regional Offices (3 cols) */}
           <div className="lg:col-span-3 space-y-4">
             <h4 className="text-sm font-extrabold text-amber-400 uppercase tracking-wider">
-              Regional Offices
+              {t("sections.regionalOffices")}
             </h4>
 
             <div className="space-y-3.5 text-xs text-purple-100">
               <div className="p-3.5 rounded-2xl bg-white/10 border border-white/10 space-y-1">
                 <div className="font-bold text-white flex items-center gap-1.5 text-xs sm:text-sm">
                   <Globe weight="bold" className="w-4 h-4 text-amber-400" />
-                  Canada Governance Office
+                  {t("offices.canadaTitle")}
                 </div>
                 <p className="text-purple-100 pl-5">
-                  Alberta / Ontario, Canada • Reg. Society Under Alberta Societies Act
+                  {t("offices.canadaLocation")}
                 </p>
               </div>
 
               <div className="p-3.5 rounded-2xl bg-white/10 border border-white/10 space-y-1">
                 <div className="font-bold text-white flex items-center gap-1.5 text-xs sm:text-sm">
                   <MapPin weight="bold" className="w-4 h-4 text-emerald-400" />
-                  Cameroon Regional Hub
+                  {t("offices.cameroonTitle")}
                 </div>
                 <p className="text-purple-100 pl-5">
-                  Boulevard de la Liberté, Akwa, Douala / Yaoundé, Cameroon
+                  {t("offices.cameroonLocation")}
                 </p>
               </div>
 
@@ -290,32 +290,32 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-purple-200">
             <div className="flex items-center gap-2 text-center md:text-left">
-              <span>© {currentYear} JOVIA Foundation. All rights reserved.</span>
+              <span>{t("bottom.copyright", { year: currentYear })}</span>
               <span className="hidden sm:inline">•</span>
               <span className="text-amber-300 hidden sm:inline">
-                Every Child Deserves a Chance to Thrive.
+                {t("bottom.slogan")}
               </span>
             </div>
 
             <div className="flex flex-wrap justify-center items-center gap-6">
               <Link href="/privacy" className="hover:text-white transition-colors">
-                Privacy Policy
+                {t("bottom.privacyPolicy")}
               </Link>
               <Link href="/terms" className="hover:text-white transition-colors">
-                Terms of Use
+                {t("bottom.termsOfUse")}
               </Link>
               <Link href="/code-of-conduct" className="hover:text-white transition-colors">
-                Code of Conduct
+                {t("bottom.codeOfConduct")}
               </Link>
               <Link href="/contact" className="hover:text-white transition-colors">
-                Contact Us
+                {t("bottom.contactUs")}
               </Link>
               <Link
                 href="/contact#donate"
                 className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[var(--foundation-accent)] text-white font-bold hover:bg-[var(--foundation-accent-hover)] transition-all"
               >
                 <Heart weight="fill" className="w-3.5 h-3.5 fill-current" />
-                Donate
+                {t("bottom.donate")}
               </Link>
             </div>
           </div>
