@@ -91,8 +91,8 @@ export default function Home() {
                 <div className="flex -space-x-3 overflow-hidden">
                   {[
                     "/images/nursechild.avif",
-                    "/images/younggirlwheelchair.avif",
-                    "/images/disabledperson.jpg",
+                    "/images/youngboywheelchair.jpg",
+                    "/images/disabledchildlaughing.png",
                     "/images/womanchildtalking.avif",
                     "/images/poorwomantalking.avif",
                   ].map((src, i) => (
@@ -129,7 +129,7 @@ export default function Home() {
                   {/* Photo 1: Wheelchair Freedom */}
                   <div className="relative h-48 sm:h-56 rounded-3xl overflow-hidden shadow-md border border-purple-100 group">
                     <Image
-                      src="/images/younggirlwheelchair.avif"
+                      src="/images/youngboywheelchair.jpg"
                       alt={t("hero.imageAlts.wheelchair")}
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -160,7 +160,7 @@ export default function Home() {
                   {/* Photo 3: Adaptive Education */}
                   <div className="relative h-48 sm:h-56 rounded-3xl overflow-hidden shadow-md border border-purple-100 group">
                     <Image
-                      src="/images/disabledperson.jpg"
+                      src="/images/disabledchildren.jpg"
                       alt={t("hero.imageAlts.adaptiveEducation")}
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -498,7 +498,7 @@ export default function Home() {
             <div className="bg-white rounded-3xl border border-purple-100 shadow-[0_10px_30px_-5px_rgba(123,2,246,0.06)] hover:shadow-2xl overflow-hidden transition-all duration-300 flex flex-col group">
               <div className="relative h-60 w-full overflow-hidden bg-purple-50">
                 <Image
-                  src="/images/disabledperson.jpg"
+                  src="/images/disabledchildren.jpg"
                   alt={t("fieldInitiatives.item1.imageAlt")}
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -564,7 +564,7 @@ export default function Home() {
             <div className="bg-white rounded-3xl border border-purple-100 shadow-[0_10px_30px_-5px_rgba(123,2,246,0.06)] hover:shadow-2xl overflow-hidden transition-all duration-300 flex flex-col group">
               <div className="relative h-60 w-full overflow-hidden bg-purple-50">
                 <Image
-                  src="/images/younggirlwheelchair.avif"
+                  src="/images/youngchildrecievesnewwheelchair.jpg"
                   alt={t("fieldInitiatives.item2.imageAlt")}
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
